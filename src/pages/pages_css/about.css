@@ -1,0 +1,25 @@
+.about-main-div {
+  background-color: #74c7c7bb;
+  background-image: url("/about-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-main-h1 {
+  text-align: center;
+  font-size: 100px;
+  font-family: sans-serif;
+  color: #021f5ed8;
+}
+.about-main-p {
+  text-align: center;
+
+  font-family: sans-serif;
+  color: #021f5ed8;
+}

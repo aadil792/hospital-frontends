@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300..800&family=Winky+Sans:ital,wght@1,300..900&display=swap");
+
+.join-div-h1 {
+  text-align: center;
+  color: rgb(103, 77, 30);
+}
+
+.f-para {
+  text-align: center;
+  font-weight: 600;
+  color: #9a1010;
+}
+.benefits-para {
+  font-size: large;
+  color: black;
+  text-decoration: underline;
+}
+.contain-benefits {
+  margin-top: 5px;
+  font-size: 13px;
+}
+.contain-join {
+  margin-top: 5px;
+  font-size: 13px;
+}
+.benefits-div {
+  background-color: rgb(38, 106, 143);
+  color: rgb(255, 255, 255);
+  width: 40%;
+  min-height: 150px;
+  text-align: center;
+  justify-content: center;
+  margin-top: 30px;
+  border-radius: 5px;
+  margin-left: auto;
+  position: relative;
+  margin-right: 30px;
+  box-shadow: 0px 2px 10px black;
+  display: flex;
+  padding: 15px;
+  box-sizing: border-box;
+  flex-direction: column;
+  word-wrap: break-word;
+  overflow: hidden;
+  cursor: pointer;
+}
+.benefits-div:hover {
+  background-color: rgb(27, 65, 85);
+  box-shadow: 0px 10px 10px black;
+}
+.membership-div-matter {
+  background-color: rgb(38, 106, 143);
+  width: 40%;
+  min-height: 100px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-left: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 10px black;
+  display: flex;
+  padding: 15px;
+  box-sizing: border-box;
+  flex-direction: column;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.membership-div-matter:hover {
+  background-color: rgb(27, 65, 85);
+  box-shadow: 0px 10px 10px black;
+}
+.contain-membership {
+  margin-top: 5px;
+  font-size: 13px;
+}
+.join-div {
+  background-color: rgb(38, 106, 143);
+  color: rgb(255, 255, 255);
+  width: 40%;
+  min-height: 120px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 5px;
+  margin-left: auto;
+  position: relative;
+  box-shadow: 0px 2px 10px black;
+  margin-right: 30px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.join-div:hover {
+  background-color: rgb(27, 65, 85);
+  box-shadow: 0px 10px 10px black;
+}
+
+/* parent div */
+.matter-div {
+  background-color: #74c7c7bb;
+  /* background: linear-gradient(to right, #dfeeff, #58acfa);  */
+  min-width: 100%;
+  min-height: 700px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+.a-create-login {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  margin: auto;
+}
+.login-matter-div {
+  margin-left: auto;
+  margin-right: 30px;
+}
+.create-matter-div {
+  margin-left: 30px;
+}
+.a-create {
+  background-color: rgb(207, 145, 31);
+  width: 250px;
+  border: none;
+  min-height: 50px;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 4px;
+  margin-top: 25px;
+  font-size: medium;
+  font-weight: 500;
+}
+.a-create:hover {
+  background-color: #038585;
+  color: aliceblue;
+  box-shadow: 0px 6px 10px #063030;
+  cursor: pointer;
+}
+
+.a-login {
+  background-color: rgb(207, 145, 31);
+  width: 250px;
+  border: none;
+  height: 50px;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 4px;
+  margin-top: 25px;
+  font-size: medium;
+  font-weight: 500;
+}
+.a-login:hover {
+  background-color: #038585;
+  color: aliceblue;
+  box-shadow: 0px 6px 10px #063030;
+  cursor: pointer;
+}
+.create-matter-div a {
+  text-decoration: none;
+  color: black;
+}
+.login-matter-div a {
+  text-decoration: none;
+  color: black;
+  padding: 40px;
+}
+
+/* main div for google div section -3*/
+.google-main {
+  display: flex;
+  background-color: #74c7c7bb;
+  /* background-color: rgb(105, 80, 129); */
+  height: 650px;
+  min-width: 400px;
+  justify-content: end;
+  font-family: "Open Sans", sans-serif;
+}
+/* google child div */
+.google-login-main {
+  background-color: rgb(143, 12, 12);
+  height: 270px;
+  width: 250px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+}
+.input-placeholder-login {
+  height: 40px;
+  display: flex;
+  margin-top: 10px;
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+  outline: none;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 0px 0px 4px black;
+}
+.input-placeholder-login::placeholder {
+  text-align: center;
+}
+.google-login-main button:hover {
+  background-color: rgb(174, 147, 35);
+}
+.google-login-main button {
+  height: 30px;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 30px;
+  width: 60%;
+  text-align: center;
+  border-radius: 2px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  box-shadow: 0px 0px 5px black;
+}
+.input-placeholder-login {
+  text-align: center;
+}
+
+/* membership parent div section-2*/
+.membership-main {
+  display: flex;
+  background-color: #74c7c7bb;
+  min-width: 100%;
+  height: 650px;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+}
+/* create account main div */
+.create-account-main {
+  display: flex;
+  height: 400px;
+  min-width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* login main div */
+.login-form-main {
+  background-color: rgb(143, 12, 12);
+  min-width: 400px;
+  height: 450px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.input-placeholder::placeholder {
+  text-align: center;
+}
+.input-placeholder {
+  text-align: center;
+}
+.h3-login-form {
+  text-align: center;
+  color: rgb(213, 169, 87);
+}
+.login-form-main input {
+  height: 40px;
+  display: flex;
+  margin-top: 10px;
+  border-radius: 2px;
+  border: none;
+  width: 60%;
+  outline: none;
+  margin: auto;
+  margin-top: 10px;
+  box-shadow: 0px 0px 4px black;
+}
+.login-form-main-button {
+  height: 30px;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 80px;
+  width: 60%;
+  text-align: center;
+  border-radius: 2px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+.login-back-button {
+  height: 30px;
+  margin: auto;
+  margin-top: 10px;
+  margin-left: 80px;
+  width: 60%;
+  text-align: center;
+  border-radius: 2px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+  box-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.login-form-main button:hover {
+  background-color: rgb(174, 147, 35);
+}
+
+@media (max-width: 800px) {
+  .benefits-div,
+  .membership-div-matter,
+  .join-div {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .a-create-login {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .login-matter-div {
+    margin-bottom: 10px;
+  }
+
+  .create-matter-div,
+  .login-matter-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 55px;
+  }
+  .a-create {
+    margin-right: 30px;
+  }
+  .a-create,
+  .a-login {
+    width: 90%;
+    max-width: 250px;
+    height: 50px;
+    margin-top: 10px;
+  }
+
+  .google-main {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .google-login-main {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .membership-main {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-form-main {
+    height: auto;
+    padding: 20px;
+  }
+
+  .login-form-main-button,
+  .login-back-button {
+    width: 60%;
+    margin-left: 20%;
+  }
+}
