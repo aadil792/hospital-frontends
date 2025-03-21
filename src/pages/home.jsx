@@ -1,25 +1,41 @@
-import "../pages/pages_css/home.css";
-
 import Layout from "../componets/layout/layout";
+import  "../pages/pages_css/home.css";  // Correct relative path
+import drreddy from "../assets/drreddy.png";
 
+import cipla from "../assets/cipla.jpg";
 
-const Home_p = () => {
- 
-  return (
-    <>
-      <Layout>
+import mankind from "../assets/mankind.png";
 
-      <div className="home-main-div">
-        <div className="about-main-contain">
-
-        <h1 className="about-main-h1">The Best Surgeons </h1>
-        <p className="about-main-p">More than 1000 physicians , secientists and researchers</p>
-     
-        </div>
-      </div>
-       
-      </Layout>
+import himalaya from "../assets/himalaya.png";
+const Home_p=()=>
+{
+    return(
+        <>
+        <Layout>
+            <div className="whole" >
+            <div className="background_image">
+            
+           </div>
+                </div>
+                <div className="footer">
+                
+                    <h2 className="titlecolor">Partners who support us</h2>
+                    <div class="divider"></div>
+                    
+                    <p id="supportline">Lets know moreel necessitatibus dolor asperiores illum possimus sint <br></br>voluptates incidunt molestias nostrum laudantium. 
+                    Maiores porro <br></br> cumque quaerat.</p>
+                    <div class="image-container">
+                    <img src={cipla} alt="" style={{width: "190px"  , height: "125px"}} id="first"></img>
+                     <img src={drreddy} alt=""style={{width: "190px"  , height: "125px"}} id="first"></img>
+                     <img src={mankind} alt=""style={{width: "190px"  , height: "125px"}} id="first"></img>
+                     <img src={himalaya} alt=""style={{width: "190px"  , height: "125px"}} id="first"></img>
+                     
+                   </div>
+                </div>
+                
+        </Layout>
     </>
-  );
-};
+    )
+}
+
 export default Home_p;

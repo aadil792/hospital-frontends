@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../navigation/nav.css";
-
+import main_logo from "../../assets/main_logo.png"
 const Header_n = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -13,7 +13,7 @@ const Header_n = () => {
       <div className={navbarClass}>
         <div className="header-child">
           <div className="main-logo" id="i-1">
-            <img src="/main_logo.png" className="m-logo" alt="logo" />
+            <img src={main_logo} className="m-logo" alt="logo" />
           </div>
           <div className="menu-logo">
             <input
