@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../navigation/nav.css";
-import main_logo from "../../assets/main_logo.png"
+import main_logo from "../../assets/main_logo.png";
+import menu_logo from "../../assets/menu.png";
 const Header_n = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
@@ -23,7 +24,7 @@ const Header_n = () => {
               onChange={() => setMenuOpen(!menuOpen)}
             />
             <label htmlFor="menu-toggle" className="menu-icon">
-              <img src="/menu.png" className="m-logo" alt="menu" />
+              <img src={menu_logo} className="m-logo" alt="menu" />
             </label>
           </div>
           <div className={`link-nav ${menuOpen ? "nav-slide" : ""}`}>

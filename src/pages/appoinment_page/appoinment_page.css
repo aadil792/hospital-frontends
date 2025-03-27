@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300..800&family=Winky+Sans:ital,wght@1,300..900&display=swap");
+
+/* main div for page*/
+.appoinment-main-page {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  width: 90%; /* Responsive width */
+  max-width: 1200px; /* Maximum width */
+  min-width: 300px; /* Minimum width */
+  margin: 0 auto; /* Center the div */
+  flex-direction: row; /* Default layout */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* main first box */
+.appoinment-first-div {
+  margin: auto;
+  color: rgb(33, 33, 140);
+}
+
+/* main second box */
+.appoinment-second-div {
+  height: auto;
+  margin-left: 100px;
+}
+/* second div text box  */
+.second-div-text-div {
+  margin-left: 12px;
+}
+.book-para {
+  margin-top: 10px;
+}
+.second-div-text-div h1 {
+  font-size: 45px;
+  color: rgb(33, 33, 140);
+}
+.second-div-text-div p {
+  font-size: 15px;
+  color: rgb(91, 15, 15);
+  font-weight: 500;
+}
+
+/* table css starts here */
+.appoinment-table-div {
+  margin-top: 15px;
+}
+
+.appoinment-table-div table {
+  border-spacing: 10px;
+}
+.appoinment-table-div td {
+  height: 50px;
+}
+.appoinment-table-div input {
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  font-size: 15px;
+}
+.message-div textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+}
+.message-div {
+  height: 150px;
+  text-align: center;
+}
+
+.department-select-div select {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 15px;
+}
+.appoinment-t-button {
+  display: flex;
+  margin: auto;
+  background-color: rgb(9, 154, 154);
+  width: 200px;
+  text-align: center;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  color: aliceblue;
+  font-size: 15px;
+}
+.appoinment-t-button:hover {
+  background-color: rgb(230, 0, 0);
+  box-shadow: 0px 5px 5px black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+    .appoinment-main-page {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      width: 100%; /* Full width for phones */
+      min-width: 0; /* Remove min-width to fit smallest screens */
+      padding: 15px; /* Consistent padding */
+      box-sizing: border-box;
+    }
+  
+    .appoinment-first-div {
+      margin: 15px 0; /* More breathing room */
+      text-align: center; /* Ensure text is centered */
+    }
+  
+    .appoinment-second-div {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 0; /* Remove left margin for full-width alignment */
+      width: 100%; /* Ensure it takes full width */
+    }
+  
+    .second-div-text-div h1 {
+      font-size: 28px; /* Smaller heading for phones */
+      text-align: center; /* Center the title */
+    }
+    .second-div-text-div p {
+      font-size: 14px;
+      text-align: center; /* Center the paragraph */
+      margin: 10px 15px; /* Add horizontal margin for readability */
+    }
+  
+    .appoinment-table-div table {
+      border-spacing: 8px; /* Slightly more spacing for clarity */
+      width: 100%;
+      margin: 0 auto;
+    }
+    .appoinment-table-div td {
+      display: block; /* Stack vertically */
+      width: 100%; /* Full width */
+      height: auto;
+      text-align: center; /* Center content in each cell */
+    }
+    .appoinment-table-div input,
+    .department-select-div select {
+      width: 85%; /* Wider for better usability */
+      max-width: 100%; /* Allow full width if needed */
+      height: 45px; /* Slightly smaller height */
+      background-color: antiquewhite;
+      margin: 8px auto; /* Consistent vertical spacing */
+      display: block;
+      border-radius: 5px; /* Softer edges */
+      font-size: 14px; /* Readable text */
+    }
+    .message-div {
+      height: 100px; /* Slightly smaller but usable */
+    }
+    .message-div textarea {
+      width: 85%; /* Match input width */
+      max-width: 100%;
+      height: 100%; /* Full height of container */
+      margin: 8px auto;
+      display: block;
+      border-radius: 5px;
+      font-size: 14px;
+      padding: 10px; /* Inner padding for comfort */
+    }
+    .appoinment-t-button {
+      width: 160px; /* Slightly larger for tap target */
+      height: 45px;
+      font-size: 14px;
+      margin: 15px auto; /* More space above, remove negative margin */
+      display: block;
+      border-radius: 5px;
+    }
+  }
+  
+  /* Additional media query for very small screens (e.g., phones below 400px) */
+  @media (max-width: 400px) {
+    .second-div-text-div h1 {
+      font-size: 24px; /* Even smaller heading */
+    }
+    .second-div-text-div p {
+      font-size: 12px; /* Smaller text */
+    }
+    .appoinment-table-div input,
+    .department-select-div select {
+      width: 90%; /* Almost full width */
+      height: 40px; /* Compact height */
+    }
+    .message-div {
+      height: 80px; /* Smaller textarea */
+    }
+    .message-div textarea {
+      width: 90%;
+      font-size: 12px;
+    }
+    .appoinment-t-button {
+      width: 140px;
+      height: 40px;
+      font-size: 13px;
+    }
+  }

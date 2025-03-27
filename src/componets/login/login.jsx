@@ -39,7 +39,6 @@ const Login_l = () => {
         setName("");
         setEmail("");
         setPassword("");
-
         navigate("/dashboard");
       } else {
         setName("");
