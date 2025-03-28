@@ -14,7 +14,9 @@ const Header_n = () => {
       <div className={navbarClass}>
         <div className="header-child">
           <div className="main-logo" id="i-1">
-            <img src={main_logo} className="m-logo" alt="logo" />
+            <a href="/">
+              <img src={main_logo} href="/" className="m-logo" alt="logo" />
+            </a>
           </div>
           <div className="menu-logo">
             <input
@@ -28,44 +30,50 @@ const Header_n = () => {
             </label>
           </div>
           <div className={`link-nav ${menuOpen ? "nav-slide" : ""}`}>
-            <Link
-              to="/"
-              className="links-nav"
-              id="h-child"
-            >
+            <Link to="/" className="links-nav" id="h-child">
               <span className="link-span-c">Home</span>
             </Link>
             <Link
               to="/about"
-              className={`links-nav ${location.pathname === "/about" ? "active-link" : ""}`}
+              className={`links-nav ${
+                location.pathname === "/about" ? "active-link" : ""
+              }`}
               id="h-child"
             >
               <span className="link-span-c">About</span>
             </Link>
             <Link
               to="/membership"
-              className={`links-nav ${location.pathname === "/membership" ? "active-link" : ""}`}
+              className={`links-nav ${
+                location.pathname === "/membership" ? "active-link" : ""
+              }`}
               id="h-child"
             >
               <span className="link-span-c">MemberShip</span>
             </Link>
             <Link
               to="/department"
-              className={`links-nav ${location.pathname === "/department" ? "active-link" : ""}`}
+              className={`links-nav ${
+                location.pathname === "/department" ? "active-link" : ""
+              }`}
               id="h-child"
             >
               <span className="link-span-c">Department</span>
             </Link>
             <Link
               to="/doctor_availabilty"
-              className={`links-nav ${location.pathname === "/doctor_availabilty" ? "active-link" : ""}`}
+              className={`links-nav ${
+                location.pathname === "/doctor_availabilty" ? "active-link" : ""
+              }`}
               id="h-child"
             >
               <span className="link-span-c">Doctor Availabilty</span>
             </Link>
             <Link
               to="/contact"
-              className={`links-nav ${location.pathname === "/contact" ? "active-link" : ""}`}
+              className={`links-nav ${
+                location.pathname === "/contact" ? "active-link" : ""
+              }`}
               id="h-child"
             >
               <span className="link-span-c">Contact</span>

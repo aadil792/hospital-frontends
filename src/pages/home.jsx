@@ -14,7 +14,7 @@ const Home_p = () => {
         <div className="whole">
           <div className="background_image">
           <Link to="/appoinment" className="appinment-button-home">
-          <span id="appoinment-text">Make Appoinment</span>
+          <span id="appoinment-text">Make Appointment</span>
            </Link>
           </div>
         </div>

@@ -12,6 +12,10 @@
   width: 750px;
   margin-left: 250px;
 }
+.appinment-button-home{
+  text-decoration: none;
+  color: black;
+}
 
 @media (max-width: 800px) {
   .whole {
