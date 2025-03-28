@@ -12,9 +12,33 @@
   width: 750px;
   margin-left: 250px;
 }
-.appinment-button-home{
+.appinment-button-homes{
   text-decoration: none;
   color: black;
+  background-color: rgb(26, 135, 133);
+  height: 60px;
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  color: aliceblue;
+}
+
+
+.appinment-button-home{
+  background-color: aquamarine;
+  height: 60px;
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: auto;
+  margin-top: 20px;
+  border-radius: 5px;
 }
 
 @media (max-width: 800px) {
