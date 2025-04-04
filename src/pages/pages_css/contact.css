@@ -1,3 +1,26 @@
 .contact-main-div{
-    background-color: #74c7c7bb;
+    font-family: "Open Sans", sans-serif;
+    background-image: url("../../assets/about-page.jpg");
+    display: flex;
+    background-position: cover;
+    background-size: cover;
+    min-height: 100vh;
+}
+.contact-matter-main{
+    margin: auto;
+}
+.h2-contact-main{
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 50px;
+    color: rgb(24, 93, 115);
+}
+.h2-contact-h{
+    color: #000000;
+    margin-bottom: 20px;
+}
+.tags-contact{
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
 }
