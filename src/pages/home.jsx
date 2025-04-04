@@ -10,15 +10,18 @@ const Home_p = () => {
     <>
       <Layout>
         <div className="home-main-page-div">
-          <div className="whole">
-            <div className="background_image">
-              <div className="appinment-button-home" id="appoinment-text">
-                <Link to="/appoinment"  className="appinment-button-homes">
-                  <span>Make Appointment</span>
-                </Link>
-              </div>
-            </div>
+          <div className="appinment-button-home" id="appoinment-text">
+            <Link to="/appoinment" className="appinment-button-homes">
+              <span>Make Appointment</span>
+            </Link>
           </div>
+          {/* change this admin login diraction */}
+          <div className="appinment-button-home" id="appoinment-text">
+            <Link to="/admin_login_page" className="appinment-button-homes">
+              <span>admin login page</span>
+            </Link>
+          </div>
+
           <div className="footer">
             <h2 className="titlecolor">Partners who support us</h2>
             <div class="divider"></div>
