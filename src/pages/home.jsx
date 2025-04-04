@@ -4,17 +4,18 @@ import drreddy from "../assets/drreddy.png";
 import cipla from "../assets/ciplas.png";
 import mankind from "../assets/mankind.png";
 import himalaya from "../assets/himalaya.png";
+import { Link } from "react-router-dom";
 const Home_p = () => {
   return (
     <>
       <Layout>
         <div className="home-main-page-div">
           {/* change this admin login diraction */}
-          {/* <div className="appinment-button-home" id="appoinment-text">
+          { <div className="appinment-button-home" id="appoinment-text">
             <Link to="/admin_login_page" className="appinment-button-homes">
               <span>admin login page</span>
             </Link>
-          </div> */}
+          </div> }
 
           <div className="home-page-footer ">
             <h2 className="titlecolor">
