@@ -2,16 +2,10 @@
 
 .home-main-page-div {
   font-family: "Open Sans", sans-serif;
+   
 }
 
-.background_image {
-  background-image: url("E:\new1\src\assets\doctors.png");
-  background-size: cover;
-  background-position: center;
-  height: 600px;
-  width: 750px;
-  margin-left: 250px;
-}
+
 .appinment-button-homes{
   text-decoration: none;
   color: black;
