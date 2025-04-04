@@ -97,7 +97,7 @@ const Admin_LP = () => {
                 className="admin-st-btn"
                 type="submit"
                 onClick={handlechange}
-                value="Submit"
+                value="Login"
               />
             </form>
           </div>
