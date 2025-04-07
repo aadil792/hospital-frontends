@@ -2,7 +2,11 @@
 
 .home-main-page-div {
   font-family: "Open Sans", sans-serif;
-   
+   background-image: url("../../assets/doctorgroup.jpg");
+   display: flex;
+   background-position: cover;
+   background-size: cover;
+   min-height: 100vh;
 }
 
 
@@ -34,45 +38,77 @@
   margin-top: 20px;
   border-radius: 5px;
 }
-
-@media (max-width: 800px) {
-  .whole {
-    width: 90%;
-    height: 70%;
-    margin: 10px auto;
-    flex-direction: column;
-  }
+.home-page-footer{
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  margin-top: auto;
+  text-align: center;
+  
 }
+
+.titlecolor{
+color: rgb(82, 146, 125);
+}
+#supportline{
+color: rgb(0, 0, 0);
+margin-top: 20px;
+text-align: center;
+font-size: medium;
+}
+
 
 .titlecolor {
-  margin-top: 500px;
-  height: 80px;
-  text-align: center;
   color: black;
-}
-.titlecolor h2 {
-  height: 50px;
-  font-size: 50px;
-  padding-top: 1px;
-  padding-right: 2px;
-  padding-bottom: 13px;
-  padding-left: 4px;
+  font-size: 30px;
   font-weight: bolder;
   text-decoration: underline;
 }
-.divider {
-  margin-top: 20px;
-
-  margin-top: 10px;
-}
-#supportline {
+.home-page-footer{
+  margin-top:100vh;
   text-align: center;
-  font-size: small;
+
 }
-.image-container {
-  margin-left: 250px;
-  margin-top: 100px;
-}
+
+
+
 #first {
-  padding: 25px;
+  padding: 40px;
+}
+@media (max-width: 800px) {
+  .whole {
+      width: 90%;
+      height: 70%;
+      margin: 10px auto;
+      flex-direction: column;
+  }
+
+  .home-main-page-div {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 80vh;
+      flex-direction: column;
+      padding: 20px;
+  }
+
+  .appinment-button-homes,
+  .appinment-button-home {
+      width: 150px;
+      height: 50px;
+      margin: 10px auto;
+  }
+
+  .home-page-footer {
+    padding: 15px;
+    font-size: 14px;
+    position: relative;
+    width: 100%;
+}
+
+  .titlecolor {
+      font-size: 24px;
+  }
 }

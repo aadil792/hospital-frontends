@@ -7,6 +7,7 @@ const Dashboard_page = () => {
     try {
       const res = await fetch("http://localhost:8000/user/logout" ,{
         method:"get",
+        credentials:"include"
       });
       if(res.ok){
         localStorage.removeItem("user");

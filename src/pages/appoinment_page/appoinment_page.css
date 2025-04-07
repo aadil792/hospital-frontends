@@ -13,19 +13,23 @@
   box-sizing: border-box;
 }
 
+.appointment-main-page-div{
+  background-color: #74c7c7bb;
+}
 /* main first box */
 .appoinment-first-div {
   margin: auto;
   color: rgb(33, 33, 140);
-  box-shadow: 0px 0px 10px rgb(15, 72, 169);
+  box-shadow: 0px 0px 10px rgb(37, 70, 126);
   width: 500px;
   justify-content: center;
   text-align: center;
   height: 80px;
-  border-radius: 50px;
+  border-radius: 10px;
+  
 }
 .appoinment-first-div:hover {
-  box-shadow: 0px 10px 5px rgb(19, 54, 114);
+  box-shadow: 0px 10px 5px rgb(0, 0, 0);
   background-color: rgb(21, 93, 122);
   color: rgb(255, 255, 255);
 }

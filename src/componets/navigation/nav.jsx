@@ -61,14 +61,15 @@ const Header_n = () => {
               <span className="link-span-c">Department</span>
             </Link>
             <Link
-              to="/doctor_availabilty"
+              to="/appoinment"
               className={`links-nav ${
-                location.pathname === "/doctor_availabilty" ? "active-link" : ""
+                location.pathname === "/appoinment" ? "active-link" : ""
               }`}
               id="h-child"
             >
-              <span className="link-span-c">Doctor Availabilty</span>
+              <span className="link-span-c">Make Appointment</span>
             </Link>
+            
             <Link
               to="/contact"
               className={`links-nav ${
