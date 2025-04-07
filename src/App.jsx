@@ -9,8 +9,10 @@ import Contact_page from "./pages/contact.jsx";
 import Department_page from "./pages/department.jsx";
 import Doctor_availabilty from "./pages/doctor_availabilty.jsx";
 import Appoinment_page from "./pages/appoinment_page/appoinment_page.jsx";
-import Admin_LP from "./pages/Admin_pages/admin_lp.jsx";
-
+import Admin_LP from "./pages/Admin_pages/adminLogin/admin_lp.jsx";
+import ProtectRoutes from "./componets/protectRoutes/protectedRoutes.jsx";
+import AdminDashboardPage from "./pages/Admin_pages/adminDashboard/adminDashboard.jsx";
+import UserProRoutes from "./componets/protectRoutes/userProtectedRoutes.jsx";
 
 const App = () => {
   return (
@@ -25,8 +27,25 @@ const App = () => {
         <Route path="/department" element={<Department_page />} />
         <Route path="/doctor_availabilty" element={<Doctor_availabilty />} />
         <Route path="/appoinment" element={<Appoinment_page />} />
-        <Route path="/dashboard" element={<Dashboard_page />} />
-        <Route path="/admin_Login_page" element={<Admin_LP/>}/>
+        <Route path="/admin_Login_page" element={<Admin_LP />} />
+
+        {/* Protected Routes*/}
+        <Route
+          path="/user_dashboard"
+          element={
+            <UserProRoutes>
+              <Dashboard_page />
+            </UserProRoutes>
+          }
+        />
+        <Route
+          path="/admin_dashboard"
+          element={
+            <ProtectRoutes>
+              <AdminDashboardPage />
+            </ProtectRoutes>
+          }
+        />
       </Routes>
     </Router>
   );

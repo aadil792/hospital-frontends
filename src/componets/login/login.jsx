@@ -33,13 +33,14 @@ const Login_l = () => {
         headers: {
           "content-type": "application/json",
         },
+        credentials:"include",
         body: JSON.stringify(useDate),
       });
       if (res.ok) {
+        navigate("/user_dashboard");
         setName("");
         setEmail("");
         setPassword("");
-        navigate("/dashboard");
       } else {
         setName("");
         setEmail("");

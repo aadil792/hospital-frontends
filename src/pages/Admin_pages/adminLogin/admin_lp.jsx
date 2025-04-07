@@ -1,9 +1,10 @@
 // admin login page
 
 import { useState } from "react";
-import "../Admin_pages/admin_lp.css";
 import { useNavigate } from "react-router-dom";
-import Layout from "../../componets/layout/layout";
+
+import "../adminLogin/admin_lp.css";
+import Layout from "../../../componets/layout/layout";
 
 const Admin_LP = () => {
   const [adminkey, setAdminkey] = useState("");
@@ -16,6 +17,15 @@ const Admin_LP = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if(adminkey !== "admin123"){
+      alert("Invalid admin key");
+      setAdminkey(""),
+      setName(""),
+      setPassword(""),
+      setEmail("")
+      return ;
+    }
+
     const useData = {
       name,
       email,
@@ -27,9 +37,10 @@ const Admin_LP = () => {
         "content-type": "application/json",
       },
       body: JSON.stringify(useData),
+      credentials:"include",
     });
     if (res.ok) {
-      navigate("/");
+      navigate("/admin_dashboard");
       setName("");
       setAdminkey("");
       setEmail("");
@@ -37,18 +48,6 @@ const Admin_LP = () => {
     }
   };
 
-  const handlechange = () => {
-    if (adminkey === "admin123") {
-      console.log("admin login successful");
-    } else {
-      alert("invalid admin key");
-      console.log("invalid admin key");
-      setName("");
-      setAdminkey("");
-      setEmail("");
-      setPassword("");
-    }
-  };
 
   return (
     <>
@@ -56,7 +55,7 @@ const Admin_LP = () => {
         <div className="admin-main-div">
           <div className="admin-form-div">
             <form onSubmit={handleSubmit}>
-            <p className="p-admin"> Admin Login Here</p>
+              <p className="p-admin"> Admin Login Here</p>
               <input
                 type="text"
                 value={name}
@@ -92,11 +91,12 @@ const Admin_LP = () => {
                 placeholder="Admin Key"
                 required
               />
-              <p className="pt-admin">Forgot You are Admin Key ? Contact To Management</p>
+              <p className="pt-admin">
+                Forgot You are Admin Key ? Contact To Management
+              </p>
               <input
                 className="admin-st-btn"
                 type="submit"
-                onClick={handlechange}
                 value="Login"
               />
             </form>
