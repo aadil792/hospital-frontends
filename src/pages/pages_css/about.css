@@ -1,25 +1,267 @@
-.about-main-div {
-  background-color: #74c7c7bb;
-  background-image: url("/about-page.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+}
+
+.about-header {
+  background: url("C:\Users\SANTOSHI\Downloads\WhatsApp Image 2025-04-05 at 21.35.00_1615ff41.jpg")center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.about-header .overlay {
+  background: rgba(0, 0, 50, 0.5);
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  padding-top: 100px;
+}
+
+.about-header h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.about-header h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* Content Section */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  background-color: #f8f9fa;
+}
+
+.text-left {
+  flex: 1;
+  font-size: 28px;
+  font-weight: bold;
+  color: #002244;
+}
+
+.text-right {
+  flex: 2;
+  padding-left: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.signature {
+  font-family: 'Brush Script MT', cursive;
+  margin-top: 20px;
+  opacity: 0.6;
+  font-size: 24px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+.service-box {
+  width: 22%;
+  background-color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+
+.service-card h3 {
+  font-size: 18px;
+  margin: 10px 0 6px;
+  color: #222;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.achievements {
+  padding: 40px 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.achievements h2 {
+  font-size: 28px;
+  color: #002244;
+  margin-bottom: 20px;
+}
+
+.achievements h2 span {
+  font-weight: bold;
+}
+
+.logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logos img {
+  width: 150px;
+  height: auto;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.logos img:hover {
+  size: 500px;
+  opacity: 1;
+}
+.specialist-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff;
+}
+
+.specialist-section h2 {
+  font-size: 32px;
+  color: #002244;
+  margin-bottom: 10px;
+}
+
+.specialist-section .description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.specialist-container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.specialist-card {
+  width: 220px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 20px 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.specialist-card:hover {
+  transform: translateY(-5px);
+}
+
+.specialist-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.specialist-card h3 {
+  font-size: 18px;
+  color: #222;
+  margin: 10px 0 5px;
+}
+
+.specialist-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.specialist-card p span {
+  font-weight: bold;
+  color: #003366;
+}
+.testimonial-section {
+  background-color: #fff;
+  padding: 50px 20px;
+}
+
+.testimonial-content {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.about-main-h1 {
-  text-align: center;
-  font-size: 100px;
-  font-family: sans-serif;
-  color: #021f5ed8;
+.testimonial-image {
+  flex: 1;
+  min-width: 300px;
 }
-.about-main-p {
-  text-align: center;
 
-  font-family: sans-serif;
-  color: #021f5ed8;
+.testimonial-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.testimonial-text {
+  flex: 1;
+  padding: 20px 40px;
+  min-width: 300px;
+}
+
+.testimonial-text h2 {
+  font-size: 28px;
+  color: #002244;
+  margin-bottom: 15px;
+}
+
+.testimonial-text h3 {
+  font-size: 20px;
+  color: #000;
+  margin: 10px 0 0;
+}
+
+.testimonial-text .name {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.testimonial-text .feedback {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.pagination-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.pagination-dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-dots .dot.active {
+  background-color: #003366;
 }
