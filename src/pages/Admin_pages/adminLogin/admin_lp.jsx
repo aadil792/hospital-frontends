@@ -54,7 +54,6 @@ const Admin_LP = () => {
       <Layout>
         <div className="admin-main-div">
           <div className="admin-form-div">
-            <h1>checking code </h1>
             <form onSubmit={handleSubmit}>
               <p className="p-admin"> Admin Login Here</p>
               <input
