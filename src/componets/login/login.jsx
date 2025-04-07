@@ -8,7 +8,6 @@ const Login_l = () => {
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
-
   const change = (e) => {
     e.preventDefault();
     setName("");
@@ -18,7 +17,7 @@ const Login_l = () => {
       .getElementById("section-1")
       ?.scrollIntoView({ behavior: "smooth" });
   };
-  
+
   const handlelogin = async (e) => {
     e.preventDefault();
 
@@ -33,7 +32,7 @@ const Login_l = () => {
         headers: {
           "content-type": "application/json",
         },
-        credentials:"include",
+        credentials: "include",
         body: JSON.stringify(useDate),
       });
       if (res.ok) {

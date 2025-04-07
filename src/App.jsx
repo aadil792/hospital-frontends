@@ -13,6 +13,7 @@ import Admin_LP from "./pages/Admin_pages/adminLogin/admin_lp.jsx";
 import ProtectRoutes from "./componets/protectRoutes/protectedRoutes.jsx";
 import AdminDashboardPage from "./pages/Admin_pages/adminDashboard/adminDashboard.jsx";
 import UserProRoutes from "./componets/protectRoutes/userProtectedRoutes.jsx";
+import User_Login from "./componets/login/userlogin/userlogin.jsx";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/doctor_availabilty" element={<Doctor_availabilty />} />
         <Route path="/appoinment" element={<Appoinment_page />} />
         <Route path="/admin_Login_page" element={<Admin_LP />} />
+        <Route path="/user_login" element={<User_Login/>} />
 
         {/* Protected Routes*/}
         <Route

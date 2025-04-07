@@ -11,11 +11,16 @@ const Home_p = () => {
       <Layout>
         <div className="home-main-page-div">
           {/* change this admin login diraction */}
-          { <div className="appinment-button-home" id="appoinment-text">
+           <div className="appinment-button-home" id="appoinment-text">
             <Link to="/admin_login_page" className="appinment-button-homes">
-              <span>admin login page</span>
+              <span>admin login </span>
             </Link>
-          </div> }
+          </div> 
+          <div className="appinment-button-home" id="appoinment-text">
+            <Link to="/user_login" className="appinment-button-homes">
+              <span>user login</span>
+            </Link>
+          </div> 
 
           <div className="home-page-footer ">
             <h2 className="titlecolor">
