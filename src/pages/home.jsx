@@ -1,7 +1,7 @@
 import Layout from "../componets/layout/layout";
 import "../pages/pages_css/home.css"; // Correct relative path
 import drreddy from "../assets/drreddy.png";
-import cipla from "../assets/cipla.jpg";
+import cipla from "../assets/ciplas.png";
 import mankind from "../assets/mankind.png";
 import himalaya from "../assets/himalaya.png";
 import { Link } from "react-router-dom";
