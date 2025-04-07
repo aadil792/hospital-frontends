@@ -1,7 +1,22 @@
 import { useNavigate } from "react-router-dom";
-
+import "../adminDashboard/adminDashboard.css";
+import { useEffect, useState } from "react";
 const AdminDashboardPage = () => {
   const navigation = useNavigate();
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:8000/user/get-name", {
+      credentials: "include",
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Not authorized");
+        return res.json();
+      })
+      .then((data) => setName(data.name))
+      .catch((err) => console.error("Failed to get name:", err));
+  }, []);
+
   const onChange = async () => {
     try {
       await fetch("http://localhost:8000/user/logout", {
@@ -15,11 +30,17 @@ const AdminDashboardPage = () => {
   };
 
   return (
-    <>
-      <h1>Admin dashboard page</h1>
-      <h1> hii</h1>
-      <button onClick={onChange}> Logout</button>
-    </>
+    <div className="dashboard-parernt-div">
+      <div className="nav-bar-dashboard">
+        <div className="welcome-db">
+          <h1>Welcome ! {name} </h1>
+        </div>
+
+        <button className="btn-logout" onClick={onChange}>
+          Logout
+        </button>
+      </div>
+    </div>
   );
 };
 export default AdminDashboardPage;

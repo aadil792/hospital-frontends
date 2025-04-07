@@ -1,0 +1,14 @@
+.dashboard-parernt-div {
+  background-color: antiquewhite;
+  height: 100vh;
+}
+.nav-bar-dashboard {
+  background-color: aquamarine;
+  display: flex;
+}
+.welcome-db {
+  text-align: center;
+  background-color: aliceblue;
+  width: 500px;
+  margin: auto;
+}
