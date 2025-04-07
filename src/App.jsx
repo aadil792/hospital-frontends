@@ -14,6 +14,7 @@ import ProtectRoutes from "./componets/protectRoutes/protectedRoutes.jsx";
 import AdminDashboardPage from "./pages/Admin_pages/adminDashboard/adminDashboard.jsx";
 import UserProRoutes from "./componets/protectRoutes/userProtectedRoutes.jsx";
 import User_Login from "./componets/login/userlogin/userlogin.jsx";
+import Register from "./componets/account/register/register.jsx";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
         <Route path="/membership" element={<Membership />} />
         <Route path="/login" element={<Login_l />} />
         <Route path="/create_account" element={<Create_Account />} />
+        <Route path="/register" element={<Register/>}/>
         <Route path="/about" element={<About_page />} />
         <Route path="/contact" element={<Contact_page />} />
         <Route path="/department" element={<Department_page />} />

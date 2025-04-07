@@ -1,7 +1,7 @@
 // admin login page
 
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "../adminLogin/admin_lp.css";
 import Layout from "../../../componets/layout/layout";
@@ -17,13 +17,10 @@ const Admin_LP = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if(adminkey !== "admin123"){
+    if (adminkey !== "admin123") {
       alert("Invalid admin key");
-      setAdminkey(""),
-      setName(""),
-      setPassword(""),
-      setEmail("")
-      return ;
+      setAdminkey(""), setName(""), setPassword(""), setEmail("");
+      return;
     }
 
     const useData = {
@@ -37,7 +34,7 @@ const Admin_LP = () => {
         "content-type": "application/json",
       },
       body: JSON.stringify(useData),
-      credentials:"include",
+      credentials: "include",
     });
     if (res.ok) {
       navigate("/admin_dashboard");
@@ -45,9 +42,14 @@ const Admin_LP = () => {
       setAdminkey("");
       setEmail("");
       setPassword("");
+    } else {
+      alert("invalid credentials ");
+      setName("");
+      setAdminkey("");
+      setEmail("");
+      setPassword("");
     }
   };
-
 
   return (
     <>
@@ -55,7 +57,7 @@ const Admin_LP = () => {
         <div className="admin-main-div">
           <div className="admin-form-div">
             <form onSubmit={handleSubmit}>
-              <p className="p-admin"> Admin Login Here</p>
+              <p className="p-admin"> Admin Login </p>
               <input
                 type="text"
                 value={name}
@@ -94,11 +96,14 @@ const Admin_LP = () => {
               <p className="pt-admin">
                 Forgot You are Admin Key ? Contact To Management
               </p>
-              <input
-                className="admin-st-btn"
-                type="submit"
-                value="Login"
-              />
+              <input className="admin-st-btn" type="submit" value="Login" />
+              <div className="reg-div-admin">
+                Don't have an Account ?
+                <Link to="/register" className="reg-link-admin">
+                 
+                  Register
+                </Link>
+              </div>
             </form>
           </div>
         </div>

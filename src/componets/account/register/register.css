@@ -1,0 +1,51 @@
+.register-main {
+  background-color: antiquewhite;
+  height: 100vh;
+}
+.register-form-main {
+  background-color: rgb(199, 158, 108);
+  justify-items: center;
+  width: 450px;
+  height: 500px;
+  margin: auto;
+  position: relative;
+  top: 50px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+}
+
+.input-placeholder-r {
+  width: 400px;
+  text-align: center;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+}
+
+.input-placeholder-r:hover {
+  background-color: aliceblue;
+}
+.input-placeholder-r::placeholder {
+  text-align: center;
+}
+.h3-register-form {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  position: relative;
+  top: 10px;
+}
+.register-form-main-button {
+  display: flex;
+  background-color: black;
+  width: 150px;
+  text-align: center;
+  justify-content: center;
+}
+.reg-back-btn {
+  justify-self: center;
+}
+.register-back-button {
+  margin-top: 10px;
+  background-color: black;
+  width: 150px;
+}
