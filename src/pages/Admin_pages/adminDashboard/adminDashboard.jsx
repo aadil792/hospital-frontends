@@ -17,6 +17,7 @@ const AdminDashboardPage = () => {
   return (
     <>
       <h1>Admin dashboard page</h1>
+      <h1> hii</h1>
       <button onClick={onChange}> Logout</button>
     </>
   );
