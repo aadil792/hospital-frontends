@@ -16,6 +16,7 @@ import UserProRoutes from "./componets/protectRoutes/userProtectedRoutes.jsx";
 import User_Login from "./componets/login/userlogin/userlogin.jsx";
 import Register from "./componets/account/register/register.jsx";
 import Doctor_register_page from "./pages/doctor_pages/doctor_reg.jsx";
+import Appointment_allist from "./pages/Admin_pages/appointment_list/appointment_allist.jsx";
 
 const App = () => {
   return (
@@ -34,7 +35,7 @@ const App = () => {
         <Route path="/admin_Login_page" element={<Admin_LP />} />
         <Route path="/user_login" element={<User_Login/>} />
         <Route path="/doctor_register" element={<Doctor_register_page/>}/>
-
+        <Route path="/appointment-list" element={<Appointment_allist/>}/>
         {/* Protected Routes*/}
         <Route
           path="/user_dashboard"

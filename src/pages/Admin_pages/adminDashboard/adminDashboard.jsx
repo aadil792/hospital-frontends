@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const AdminDashboardPage = () => {
   const navigation = useNavigate();
   const [name, setName] = useState("");
+ 
 
   useEffect(() => {
     fetch("http://localhost:8000/user/get-name", {
@@ -17,6 +18,8 @@ const AdminDashboardPage = () => {
       .catch((err) => console.error("Failed to get name:", err));
   }, []);
 
+ 
+
   const onChange = async () => {
     try {
       await fetch("http://localhost:8000/user/logout", {
@@ -28,9 +31,13 @@ const AdminDashboardPage = () => {
       console.error("logout filed " + err);
     }
   };
-  const onChanges =()=>{
+  const onChanges = () => {
     navigation("/doctor_register");
-  }
+  };
+  const onChangese = () => {
+    navigation( "/appointment-list");
+  };
+
  
 
   return (
@@ -46,8 +53,12 @@ const AdminDashboardPage = () => {
         <button className="btn-logout" onClick={onChanges}>
           add Doctors
         </button>
-
+        <button className="btn-logout" onClick={onChangese}>
+          Appointment list 
+        </button>
+        
       </div>
+   
     </div>
   );
 };

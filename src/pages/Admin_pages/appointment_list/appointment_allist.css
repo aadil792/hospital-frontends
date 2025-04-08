@@ -1,0 +1,49 @@
+.appointmentList-main-div{
+    background-color: antiquewhite;
+    height: 100vh;   
+}
+.table-appointmentlist{
+    background-color: aliceblue;
+    margin: auto;
+}
+
+.th-appointment{
+    text-align: center;
+    width: 200px;
+    background-color: rgb(0, 33, 153);
+    color: rgb(255, 255, 255);
+    font-size: 14px; 
+    font-weight: 400;
+    height: 60px;
+}
+.th-appointment:hover{
+    background-color:rgb(16, 34, 99);
+}
+.td-appointment{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+}
+.td-appointment:hover{
+    background-color: rgb(206, 211, 215);
+}
+.id-app-td{
+    background-color: rgb(172, 194, 221);
+    text-align: center;
+}
+.id-app-td:hover{
+    background-color: rgb(65, 98, 126);
+}
+.status-complete{
+    background: none;
+    color: rgb(255, 0, 0);
+    width: 100%;    
+}
+.status-complete:hover{
+    background:none;
+    background-color: red;
+    border-radius: 0px;
+    color: rgb(255, 255, 255);
+}
+.appointmentList-main-div table td{
+  border-bottom: 1px solid black;
+}
