@@ -62,7 +62,7 @@ const Footer_f = () => {
           <p>
             <strong>Hours:</strong> Mon to Fri: 08:30 - 18:00
           </p>
-        <Link to="/create_account" className="subscribe-btn">
+        <Link to="/register" className="subscribe-btn">
         <span>Subscribe</span>
         </Link>
         </div>
