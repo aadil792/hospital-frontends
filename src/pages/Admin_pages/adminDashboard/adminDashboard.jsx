@@ -28,6 +28,10 @@ const AdminDashboardPage = () => {
       console.error("logout filed " + err);
     }
   };
+  const onChanges =()=>{
+    navigation("/doctor_register");
+  }
+ 
 
   return (
     <div className="dashboard-parernt-div">
@@ -39,6 +43,10 @@ const AdminDashboardPage = () => {
         <button className="btn-logout" onClick={onChange}>
           Logout
         </button>
+        <button className="btn-logout" onClick={onChanges}>
+          add Doctors
+        </button>
+
       </div>
     </div>
   );

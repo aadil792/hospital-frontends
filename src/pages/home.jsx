@@ -18,7 +18,12 @@ const Home_p = () => {
           </div> 
           <div className="appinment-button-home" id="appoinment-text">
             <Link to="/user_login" className="appinment-button-homes">
-              <span>user login</span>
+              <span>Patient login</span>
+            </Link>
+          </div> 
+          <div className="appinment-button-home" id="appoinment-text">
+            <Link to="/doctor_register" className="appinment-button-homes">
+              <span>Doctor Register</span>
             </Link>
           </div> 
 

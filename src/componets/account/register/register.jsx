@@ -80,7 +80,7 @@ const Register = () => {
       <div className="register-main">
         <div className="register-form-main">
           <form onSubmit={Handlesubmit}>
-            <h3 className="h3-register-form">Register</h3>
+            <h3 className="h3-register-form"> Register</h3>
             <label htmlFor="name">
               <input
                 type="text"
