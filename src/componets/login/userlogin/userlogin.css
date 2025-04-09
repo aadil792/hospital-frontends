@@ -1,0 +1,11 @@
+.user-form-div{
+    background-color: rgb(53, 50, 42);
+    display: flex;
+    width: 450px;
+    justify-content: center;
+    height: 350px;
+    margin: auto;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+}

@@ -52,7 +52,6 @@ const AdminDashboardPage = () => {
         <div className="welcome-db">
           <h1>Welcome ! {name} </h1>
         </div>
-
         <button className="btn-logout" onClick={onChange}>
           Logout
         </button>
