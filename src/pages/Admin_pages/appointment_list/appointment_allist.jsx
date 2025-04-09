@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "../appointment_list/appointment_allist.css";
+import { Link } from "react-router-dom";
 
 const Appointment_allist = () => {
   const [appointmentList, setAppointmentList] = useState([]);
@@ -34,21 +35,25 @@ const Appointment_allist = () => {
       console.error(error);
     }
   };
-
   return (
     <>
       <div className="appointmentList-main-div">
-        <table border={0} cellSpacing={0} className="table-appointmentlist">
+       <div className="nav-app-l-m">
+        <h1 className="ap-h1-l-m">Patient Appointment List</h1> 
+         <Link to="/admin_dashboard">back </Link>
+       </div>
+        <table cellSpacing={0} className="table-appointmentlist">
           <thead>
             <tr className="tr-appointment">
               <th className="th-appointment">Required Department </th>
               <th className="th-appointment">Required Doctor </th>
-              <th className="th-appointment">Date</th>
+              <th className="th-appointment">Appointment Date</th>
               <th className="th-appointment">Appointment Timing </th>
               <th className="th-appointment">Patient Name</th>
               <th className="th-appointment">Patient Number</th>
               <th className="th-appointment">Patient Message </th>
               <th className="th-appointment">Completed Appointment? </th>
+              <th className="th-appointment">Reschedule Appointment? </th>
             </tr>
           </thead>
           <tbody>
@@ -69,7 +74,16 @@ const Appointment_allist = () => {
                     }
                   >
                     Delete
-                  </button>{" "}
+                  </button>
+                </td>
+                <td className="id-app-tds">
+                  <Link
+                    className="apt-link-u"
+                    id="h-i"
+                    to={`/appointment-update/${appointment.id}`}
+                  >
+                    Reschedule
+                  </Link>
                 </td>
               </tr>
             ))}

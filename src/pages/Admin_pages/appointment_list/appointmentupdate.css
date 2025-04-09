@@ -1,0 +1,50 @@
+.appointment-reschedule-main{
+    background-color: antiquewhite;
+    height: 100vh;    
+}
+.appointment-reschedule-main h2{
+text-align: center;
+}
+.app-table-update{
+    border-bottom:1px solid black;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.th-update-app{
+    background-color: blue;
+    height: 60px;
+    width: 250px;
+    color: aliceblue;
+}
+.td-up-app{
+    background-color: rgb(255, 255, 255);
+}
+.td-ups-apps{
+background-color: rgb(164, 165, 165);
+color: aliceblue;
+}
+.td-up-app input{
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+.td-ups-apps input{
+    text-align: center;
+    background-color:  rgb(164, 165, 165);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-tu-app{
+    background:none;
+    color: rgb(235, 0, 0);
+    width: 100%;
+    border-radius: none; 
+}
+.btn-tu-app:hover{
+    background-color: red;  
+    color: aliceblue; 
+}
