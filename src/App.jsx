@@ -18,6 +18,9 @@ import Register from "./componets/account/register/register.jsx";
 import Doctor_register_page from "./pages/doctor_pages/doctor_reg.jsx";
 import Appointment_allist from "./pages/Admin_pages/appointment_list/appointment_allist.jsx";
 import AppointmentUpdate from "./pages/Admin_pages/appointment_list/appointmentUpdate.jsx";
+import Doctor_login from "./pages/doctor_pages/doctor login/doctor_login.jsx";
+import Doctor_dashboard from "./pages/doctor_pages/doctor dashboard/doctor_dashboard.jsx";
+import DoctorProctetedRoutes from "./componets/routes/doctorRoutes.jsx";
 
 const App = () => {
   return (
@@ -38,6 +41,7 @@ const App = () => {
         <Route path="/doctor_register" element={<Doctor_register_page/>}/>
         <Route path="/appointment-list" element={<Appointment_allist/>}/>
         <Route path="/appointment-update/:id" element={<AppointmentUpdate/>}/>
+        <Route path="/doctor_login" element={<Doctor_login/>}/>
         {/* Protected Routes*/}
         <Route
           path="/user_dashboard"
@@ -55,6 +59,14 @@ const App = () => {
             </ProtectRoutes>
           }
         />
+         <Route path="/doctor_dashboard" element={
+          <DoctorProctetedRoutes>
+
+            <Doctor_dashboard/>
+          </DoctorProctetedRoutes>
+         }
+          />
+        
       </Routes>
     </Router>
   );

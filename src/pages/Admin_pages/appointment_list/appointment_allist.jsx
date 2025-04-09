@@ -59,8 +59,8 @@ const Appointment_allist = () => {
           <tbody>
             {appointmentList.map((appointment) => (
               <tr key={appointment.id}>
-                <td className="id-app-td">{appointment.chooseDepartment} </td>
-                <td className="td-appointment">{appointment.chooseDoctor} </td>
+                <td className="id-app-td">{appointment.specializationDoctor} </td>
+                <td className="td-appointment">{appointment.doctorName} </td>
                 <td className="id-app-td">{appointment.date} </td>
                 <td className="td-appointment">{appointment.time} </td>
                 <td className="id-app-td">{appointment.fullName} </td>

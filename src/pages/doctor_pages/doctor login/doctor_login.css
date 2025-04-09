@@ -1,0 +1,37 @@
+.doctor-login-form-div{
+    background-color: rgb(53, 50, 42);
+    display: flex;
+    width: 450px;
+    justify-content: center;
+    height: 420px;
+    margin: auto;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+.input-btn-sub-doc{
+    margin: auto;
+    width: 100px;
+    background-color: black;
+    border: none;
+    margin-top:15px;
+    color: aliceblue;
+    margin-left: 127px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px black;
+    cursor: pointer;
+}
+.input-btn-sub-doc:hover{
+    background-color: red;
+}
+.rs-div-l{
+    margin-top: 20px;
+    text-align: center;
+}
+.rs-div-s{
+    color: aliceblue;
+}
+.rs-div-Link{
+    text-decoration: none;
+    color: blue;
+}

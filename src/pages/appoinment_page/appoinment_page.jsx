@@ -4,8 +4,8 @@ import "../appoinment_page/appoinment_page.css";
 
 const Appoinment_page = () => {
   const [fullName, setFullname] = useState("");
-  const [chooseDepartment, setChooseDepartment] = useState("");
-  const [chooseDoctor, setChooseDoctor] = useState("");
+  const [specializationDoctor, setSpecializationDoctor] = useState("");
+  const [doctorName, setDoctorName] = useState("");
   const [time, setTime] = useState("");
   const [date, setDate] = useState("");
   const [number, setNumber] = useState("");
@@ -15,8 +15,8 @@ const Appoinment_page = () => {
     e.preventDefault();
     const useData = {
       fullName,
-      chooseDepartment,
-      chooseDoctor,
+      specializationDoctor,
+     doctorName  ,
       time,
       date,
       number,
@@ -35,15 +35,15 @@ const Appoinment_page = () => {
       );
       if (response.ok) {
         alert("Appointment Booked");
-        setChooseDepartment("");
-        setChooseDoctor("");
+        setDoctorName("");
+        setSpecializationDoctor("");
         setDate("");
         setTime("");
         setNumber("");
         setMessage("");
       } else {
-        setChooseDepartment("");
-        setChooseDoctor("");
+        setDoctorName("");
+        setSpecializationDoctor("");
         setDate("");
         setTime("");
         setNumber("");
@@ -51,8 +51,8 @@ const Appoinment_page = () => {
       }
     } catch (error) {
       console.error(error);
-      setChooseDepartment("");
-      setChooseDoctor("");
+      setDoctorName("");
+      setSpecializationDoctor("");
       setDate("");
       setTime("");
       setNumber("");
@@ -86,17 +86,17 @@ const Appoinment_page = () => {
                       <td>
                         <input
                           type="text"
-                          value={chooseDepartment}
-                          onChange={(e) => setChooseDepartment(e.target.value)}
-                          placeholder="Department Name "
+                          value={specializationDoctor}
+                          onChange={(e) => setSpecializationDoctor(e.target.value)}
+                          placeholder="Which Specialization Need ? "
                           required
                         />
                       </td>
                       <td>
                         <input
                           type="text"
-                          value={chooseDoctor}
-                          onChange={(e) => setChooseDoctor(e.target.value)}
+                          value={doctorName}
+                          onChange={(e) => setDoctorName(e.target.value)}
                           placeholder="Doctor Name?"
                           required
                         />

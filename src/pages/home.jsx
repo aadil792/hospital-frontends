@@ -26,6 +26,11 @@ const Home_p = () => {
               <span>Doctor Register</span>
             </Link>
           </div> 
+          <div className="appinment-button-home" id="appoinment-text">
+            <Link to="/doctor_login" className="appinment-button-homes">
+              <span>Doctor Login</span>
+            </Link>
+          </div> 
 
           <div className="home-page-footer ">
             <h2 className="titlecolor">

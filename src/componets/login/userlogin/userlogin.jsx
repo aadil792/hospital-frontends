@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import  "../../../pages/Admin_pages/adminLogin/admin_lp.css";
+import "../userlogin/userlogin.css";
 import Layout from "../../../componets/layout/layout";
 
 const User_Login = () => {
@@ -38,14 +39,13 @@ const User_Login = () => {
     }
   };
 
-
   return (
     <>
       <Layout>
         <div className="admin-main-div">
-          <div className="admin-form-div">
+          <div className="user-form-div">
             <form onSubmit={handleSubmit}>
-              <p className="p-admin">User Login</p>
+              <p className="p-admin">Patient Login</p>
               <input
                 type="text"
                 value={name}
