@@ -15,6 +15,7 @@
     font-size: 14px; 
     font-weight: 400;
     height: 60px;
+    border-left: 1px solid rgb(0, 0, 0);
 }
 .th-appointment:hover{
     background-color:rgb(16, 34, 99);
@@ -46,4 +47,36 @@
 }
 .appointmentList-main-div table td{
   border-bottom: 1px solid black;
+}
+
+.apt-link-u{
+    background: none;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    padding: 5% 28%;
+    width: auto;
+}
+.apt-link-u:hover{
+    background:none;
+    background-color: red;
+    border-radius: 0px;
+    color: rgb(255, 255, 255);
+    width: 100%;
+}
+
+ .id-app-tds{
+    text-align: center;
+    cursor: pointer;
+    background-color: rgb(172, 194, 221);
+
+}
+.id-app-tds:hover{
+    background-color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
+} 
+.ap-h1-l-m{
+    text-align: center;
+    color: rgb(1, 50, 93);
 }

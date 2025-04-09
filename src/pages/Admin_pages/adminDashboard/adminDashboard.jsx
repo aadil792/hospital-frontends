@@ -17,7 +17,13 @@ const AdminDashboardPage = () => {
       .then((data) => setName(data.name))
       .catch((err) => console.error("Failed to get name:", err));
   }, []);
-
+  useEffect(() => {
+    window.history.pushState(null, "", window.location.href);
+    window.onpopstate = () => {
+      window.history.pushState(null, "", window.location.href);
+    };
+  }, []);
+  
  
 
   const onChange = async () => {
@@ -50,14 +56,14 @@ const AdminDashboardPage = () => {
         <button className="btn-logout" onClick={onChange}>
           Logout
         </button>
-        <button className="btn-logout" onClick={onChanges}>
+        
+      </div>
+      <button className="btn-logout" onClick={onChanges}>
           add Doctors
         </button>
         <button className="btn-logout" onClick={onChangese}>
           Appointment list 
         </button>
-        
-      </div>
    
     </div>
   );
