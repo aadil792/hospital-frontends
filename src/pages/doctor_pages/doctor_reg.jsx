@@ -3,8 +3,8 @@ import Layout from "../../componets/layout/layout";
 import { useNavigate } from "react-router-dom";
 import "../doctor_pages/doctor_reg.css";
 const Doctor_register_page = () => {
-  const [name, setName] = useState("");
-  const [speciality, setSpeciality] = useState("");
+  const [doctorName, setDoctorName] = useState("");
+  const [specializationDoctor, setSpecializationDoctor] = useState("");
   const [password, setPassword] = useState("");
   const [availableFrom, setAvailableFrom] = useState("");
   const [availableTo, setAvailableTo] = useState("");
@@ -30,8 +30,8 @@ const Doctor_register_page = () => {
     if (!conformpasswordCheck()) return;
 
     const useData = {
-      name,
-      speciality,
+      doctorName,
+      specializationDoctor,
       password,
       availableFrom,
       availableTo,
@@ -48,21 +48,21 @@ const Doctor_register_page = () => {
       });
       if (res.ok) {
         alert("Registeration Done");
-        setName("");
+        setDoctorName("");
         setEmail("");
         setAvailableFrom("");
         setAvailableTo("");
         setPassword("");
-        setSpeciality("");
+        setSpecializationDoctor("");
       }
     } catch (error) {
       alert(console.error(error));
-      setName("");
+      setDoctorName("");
       setEmail("");
       setAvailableFrom("");
       setAvailableTo("");
       setPassword("");
-      setSpeciality("");
+      setSpecializationDoctor("");
     }
   };
 
@@ -80,8 +80,8 @@ const Doctor_register_page = () => {
                 id="name"
                 className="input-placeholder-d"
                 placeholder="Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={doctorName}
+                onChange={(e) => setDoctorName(e.target.value)}
                 required
               />
             </label>
@@ -131,8 +131,8 @@ const Doctor_register_page = () => {
                 id="speciality"
                 className="input-placeholder-d"
                 placeholder="Speciality In"
-                value={speciality}
-                onChange={(e) => setSpeciality(e.target.value)}
+                value={specializationDoctor}
+                onChange={(e) => setSpecializationDoctor(e.target.value)}
               />
             </label>
 

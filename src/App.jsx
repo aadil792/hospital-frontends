@@ -21,6 +21,7 @@ import AppointmentUpdate from "./pages/Admin_pages/appointment_list/appointmentU
 import Doctor_login from "./pages/doctor_pages/doctor login/doctor_login.jsx";
 import Doctor_dashboard from "./pages/doctor_pages/doctor dashboard/doctor_dashboard.jsx";
 import DoctorProctetedRoutes from "./componets/routes/doctorRoutes.jsx";
+import Doctor_list from "./pages/doctor_pages/doctor_list/doctor_list.jsx";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
         <Route path="/appointment-list" element={<Appointment_allist/>}/>
         <Route path="/appointment-update/:id" element={<AppointmentUpdate/>}/>
         <Route path="/doctor_login" element={<Doctor_login/>}/>
+        <Route path="/doctor_list" element={<Doctor_list/>}/>
         {/* Protected Routes*/}
         <Route
           path="/user_dashboard"

@@ -1,11 +1,12 @@
 
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../doctor dashboard/doctor_dashboard.css";
 
 
 const Doctor_dashboard = () => {
   const [name, setName] = useState("");
+ 
   const navigation = useNavigate();
   useEffect(() => {
     fetch("http://localhost:8000/doctors/get-name", {
@@ -24,6 +25,7 @@ const Doctor_dashboard = () => {
       window.history.pushState(null, "", window.location.href);
     };
   }, []);
+ 
 
   const Logout = async () => {
     try {
@@ -41,6 +43,7 @@ const Doctor_dashboard = () => {
     <>
       <h1>welcome {name} </h1>
       <button onClick={Logout}> logout</button>
+      <Link to="/doctor_list">Appointments</Link>
     </>
   );
 };
