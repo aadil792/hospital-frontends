@@ -5,7 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 const Doctor_login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [doctorName, setDoctorName] = useState("");
   const navigation = useNavigate();
 
   const back = () => {
@@ -18,7 +18,7 @@ const Doctor_login = () => {
     const useData = {
       email,
       password,
-      name,
+      doctorName,
     };
     try {
       const res = await fetch("http://localhost:8000/doctors/login", {
@@ -35,7 +35,7 @@ const Doctor_login = () => {
         alert("login failed");
         setEmail("");
         setPassword("");
-        setName("");
+        setDoctorName("");
       }
     } catch (error) {
       alert(console.error(error));
@@ -49,9 +49,9 @@ const Doctor_login = () => {
           <form onSubmit={Handle}>
             <p className="p-admin">Doctor Login</p>
             <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              type="text" 
+              value={doctorName}
+              onChange={(e) => setDoctorName(e.target.value)}
               placeholder="Full Name"
               className="admin-input"
               required
