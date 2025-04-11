@@ -1,173 +1,141 @@
-import { useState } from "react";
-import "../register/register.css";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { AlertCircle, ArrowLeft, UserPlus } from "lucide-react"
 
+import "./register.css"
 
-const Register = () => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
-  const [conformpassword, setConformpassword] = useState("");
-  const [address, setAddress] = useState("");
-  const [email, setEmail] = useState("");
+export default function RegisterForm() {
+  const [name, setName] = useState("")
+  const [phone, setPhone] = useState("")
+  const [password, setPassword] = useState("")
+  const [confirmPassword, setConfirmPassword] = useState("")
+  const [address, setAddress] = useState("")
+  const [email, setEmail] = useState("")
+  const [error, setError] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const navigation = useNavigate();
+  const navigate = useNavigate()
 
-  const back = (e) => {
-    e.preventDefault();
-    setName("");
-    setEmail("");
-    setPhone("");
-    setAddress("");
-    setPassword("");
-    setConformpassword("");
-    navigation("/");
-  };
+  const resetForm = () => {
+    setName("")
+    setEmail("")
+    setPhone("")
+    setAddress("")
+    setPassword("")
+    setConfirmPassword("")
+    setError("")
+  }
 
-  const Handlesubmit = async (e) => {
-    e.preventDefault();
-    if (password != conformpassword) {
-      alert("incorrect password");
-      return;
+  const handleBack = (e) => {
+    e.preventDefault()
+    resetForm()
+    navigate("/")
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setError("")
+
+    if (password !== confirmPassword) {
+      setError("Passwords do not match")
+      return
     }
 
-    const useData = {
+    setIsSubmitting(true)
+
+    const userData = {
       name,
       password,
       address,
       email,
       phone,
-    };
+    }
+
     try {
       const response = await fetch("http://localhost:8000/user/create", {
-        method: "post",
+        method: "POST",
         headers: {
-          "content-type": "application/json",
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(useData),
-      });
+        body: JSON.stringify(userData),
+      })
+
       if (response.ok) {
-        alert("User is registered Successfully !");
-        setName("");
-        setEmail("");
-        setPhone("");
-        setAddress("");
-        setPassword("");
-        setConformpassword("");
+        alert("User is registered Successfully!")
+        resetForm()
       } else {
-        alert("error: " + (await response.text()));
-        setName("");
-        setEmail("");
-        setPhone("");
-        setAddress("");
-        setPassword("");
-        setConformpassword("");
+        const errorText = await response.text()
+        setError(`Error: ${errorText}`)
       }
     } catch (error) {
-      console.error(error);
-      alert("something went wrong ");
-      setName("");
-      setEmail("");
-      setPhone("");
-      setAddress("");
-      setPassword("");
-      setConformpassword("");
+      console.error(error)
+      setError("Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
     }
-  };
+  }
 
   return (
-  
-      <div className="register-main">
-        <div className="register-form-main">
-          <form onSubmit={Handlesubmit}>
-            <h3 className="h3-register-form"> Register</h3>
-            <label htmlFor="name">
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="input-placeholder-r"
-                placeholder="Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </label>
+    <div className="register-container">
+      <div className="card">
+        <h2 className="card-title">Register</h2>
+        <p className="card-description">Create a new account to get started</p>
 
-            <label htmlFor="password">
-              <input
-                type="password"
-                name="password"
-                id="password"
-                className="input-placeholder-r"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </label>
+        {error && (
+          <div className="alert">
+            <AlertCircle size={16} />
+            <span>{error}</span>
+          </div>
+        )}
 
-            <label htmlFor="confirm-password">
-              <input
-                type="password"
-                name="confirmPassword"
-                id="confirm-password"
-                className="input-placeholder-r"
-                placeholder="Confirm Password"
-                value={conformpassword}
-                onChange={(e) => setConformpassword(e.target.value)}
-                required
-              />
-            </label>
+        <form onSubmit={handleSubmit} className="form">
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)} required />
+          </div>
 
-            <label htmlFor="email">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="input-placeholder-r"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </label>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
 
-            <label htmlFor="mobile">
-              <input
-                type="number"
-                name="phone"
-                id="mobile"
-                className="input-placeholder-r"
-                placeholder="Mobile Number"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-              />
-            </label>
+          <div className="form-group">
+            <label htmlFor="phone">Phone Number</label>
+            <input id="phone" type="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
+          </div>
 
-            <label htmlFor="address">
-              <input
-                type="text"
-                name="address"
-                id="address"
-                className="input-placeholder-r"
-                placeholder="Address"
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-              />
-            </label>
-            <div className="reg-back-btn">
-              <button type="submit" className="register-form-main-button">
-                Submit
-              </button>
-            </div>
-            <div className="reg-back-btn">
-              <button className="register-back-button" onClick={back}>
-                Back
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>  
-  );
-};
-export default Register;
+          <div className="form-group">
+            <label htmlFor="address">Address</label>
+            <input id="address" type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="confirm-password">Confirm Password</label>
+            <input
+              id="confirm-password"
+              type="password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              required
+            />
+          </div>
+
+          <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
+            <UserPlus size={16} />
+            {isSubmitting ? "Registering..." : "Register"}
+          </button>
+
+          <button className="btn btn-secondary" onClick={handleBack}>
+            <ArrowLeft size={16} />
+            Back
+          </button>
+        </form>
+      </div>
+    </div>
+  )
+}

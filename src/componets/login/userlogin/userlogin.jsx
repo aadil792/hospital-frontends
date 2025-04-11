@@ -1,97 +1,133 @@
-// admin login page
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft, LogIn, User } from "lucide-react";
 
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-
-import "../../../pages/Admin_pages/adminLogin/admin_lp.css";
 import "../userlogin/userlogin.css";
-import Layout from "../../../componets/layout/layout";
-
-const User_Login = () => {
+export default function UserLogin() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const navigate = useNavigate();
-  const back = (e) => {
+
+  const handleBack = (e) => {
     e.preventDefault();
     setName("");
     setEmail("");
+    setPassword("");
     navigate("/");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    const useData = {
-      name,
-      email,
-      password,
-    };
-    const res = await fetch("http://localhost:8000/user/login", {
-      method: "post",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(useData),
-      credentials: "include",
-    });
-    if (res.ok) {
-      navigate("/user_dashboard");
-      setName("");
-      setEmail("");
-      setPassword("");
+    const userData = { name, email, password };
+
+    try {
+      const res = await fetch("http://localhost:8000/user/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+        credentials: "include",
+      });
+
+      if (res.ok) {
+        navigate("/user_dashboard");
+        setName("");
+        setEmail("");
+        setPassword("");
+      } else {
+        alert("Invalid credentials");
+        setName("");
+        setEmail("");
+        setPassword("");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <>
-      <div className="admin-main-div">
-        <nav>
-          <button className="patient-back-button" onClick={back}>
-            Back
-          </button>
-        </nav>
-        <div className="user-form-div">
-          <form onSubmit={handleSubmit}>
-            <p className="p-admin">Patient Login</p>
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              placeholder="Full Name"
-              className="admin-input"
-              required
-            />
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email"
-              className="admin-input"
-              required
-            />
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Password"
-              className="admin-input"
-              required
-            />
-            <input className="admin-st-btn" type="submit" value="Login" />
-            <div className="rs-div-l">
-              <span className="rs-div-s">Do Not Have Account ?</span>
-              <Link to="/register" className="rs-div-Link">
-                {" "}
-                Register Here !
-              </Link>
-            </div>
-          </form>
+    <div className="login-container">
+      <div className="back-button-container">
+        <button className="back-button" onClick={handleBack}>
+          <ArrowLeft className="icon" />
+          Back
+        </button>
+      </div>
+
+      <div className="form-wrapper">
+        <div className="card">
+          <div className="card-header">
+            <h2 className="card-title">
+              <User className="icon" />
+              Patient Login
+            </h2>
+            <p className="card-description">
+              Enter your credentials to access your account
+            </p>
+          </div>
+          <div className="card-content">
+            <form onSubmit={handleSubmit} className="form">
+              <div className="form-group">
+                <label htmlFor="name">Full Name</label>
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Enter your full name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Enter your password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="submit-button"
+                disabled={isSubmitting}
+              >
+                <LogIn className="icon" />
+                {isSubmitting ? "Logging in..." : "Login"}
+              </button>
+
+              <div className="register-link">
+                Don’t have an account? <a href="/register">Register Here!</a>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default User_Login;
+}
