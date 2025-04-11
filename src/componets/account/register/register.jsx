@@ -76,7 +76,7 @@ const Register = () => {
   };
 
   return (
-    <Layout>
+  
       <div className="register-main">
         <div className="register-form-main">
           <form onSubmit={Handlesubmit}>
@@ -167,8 +167,7 @@ const Register = () => {
             </div>
           </form>
         </div>
-      </div>
-    </Layout>
+      </div>  
   );
 };
 export default Register;

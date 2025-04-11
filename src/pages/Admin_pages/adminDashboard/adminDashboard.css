@@ -1,14 +1,26 @@
 .dashboard-parernt-div {
-  background-color: antiquewhite;
+  background-color: rgb(19, 103, 120);
   height: 100vh;
+  
 }
 .nav-bar-dashboard {
-  background-color: aquamarine;
+  background-color: rgb(16, 52, 81);
   display: flex;
 }
 .welcome-db {
   text-align: center;
-  background-color: aliceblue;
   width: 500px;
   margin: auto;
+  font-size: 12px;
+  color: aliceblue;
+}
+
+.btn-logout-admin{
+  background-color: black;
+
+ height: 50px;
+ margin-top: 5px;
+}
+.admin-logo-im{
+  width: 160px;
 }

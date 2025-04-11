@@ -1,12 +1,10 @@
-
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../doctor dashboard/doctor_dashboard.css";
-
-
+import logo from "../../../assets/main_logo.png";
 const Doctor_dashboard = () => {
   const [name, setName] = useState("");
- 
+
   const navigation = useNavigate();
   useEffect(() => {
     fetch("http://localhost:8000/doctors/get-name", {
@@ -19,13 +17,20 @@ const Doctor_dashboard = () => {
       .then((data) => setName(data.name))
       .catch((err) => console.error("Failed to get name:", err));
   }, []);
+
+  const change = () => {
+    navigation("/doctor_list");
+  };
+  const onchange = () => {
+    navigation("/userAppointment_list");
+  };
+
   useEffect(() => {
     window.history.pushState(null, "", window.location.href);
     window.onpopstate = () => {
       window.history.pushState(null, "", window.location.href);
     };
   }, []);
- 
 
   const Logout = async () => {
     try {
@@ -41,9 +46,29 @@ const Doctor_dashboard = () => {
 
   return (
     <>
-      <h1>welcome {name} </h1>
-      <button onClick={Logout}> logout</button>
-      <Link to="/doctor_list">Appointments</Link>
+      <div className="main-doctor-dashboard">
+        <nav className="nav-bar-doctor-dash">
+          <img className="db-logo-na" src={logo}></img>
+          <div className="h1-db-d">
+            <h3>Welcome , Dr {name}! </h3>
+          </div>
+          <button className="btn-doctor-logout" onClick={Logout}>
+            logout
+          </button>
+        </nav>
+
+        <div className="dashboard-main-doctor">
+          <div className="userapp-btn">
+
+          <button className="btn-userAppointment" onClick={onchange}>
+            User Appointments
+          </button>
+          <button className="btn-general" onClick={change}>
+            General Appointments
+          </button>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -3,3 +3,22 @@
     height: 100vh;
     justify-items: center;
 }
+.link-d-l{
+    padding: 10px 55px;
+    text-decoration: none;
+    color: black;
+   
+}
+.link-d-l:hover{
+    background-color: rgb(255, 0, 0);
+    color: aliceblue;
+}
+
+.input-app-doc-list{
+    background: none;
+}
+.input-app-doc-list:hover{
+    background-color: rgb(255, 38, 0);
+    color: aliceblue;
+
+}

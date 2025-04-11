@@ -1,10 +1,12 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../adminDashboard/adminDashboard.css";
 import { useEffect, useState } from "react";
+
+import logo from "../../../assets/main_logo.png";
+
 const AdminDashboardPage = () => {
   const navigation = useNavigate();
   const [name, setName] = useState("");
- 
 
   useEffect(() => {
     fetch("http://localhost:8000/user/get-name", {
@@ -23,8 +25,6 @@ const AdminDashboardPage = () => {
       window.history.pushState(null, "", window.location.href);
     };
   }, []);
-  
- 
 
   const onChange = async () => {
     try {
@@ -37,33 +37,30 @@ const AdminDashboardPage = () => {
       console.error("logout filed " + err);
     }
   };
-  const onChanges = () => {
-    navigation("/doctor_register");
-  };
-  const onChangese = () => {
-    navigation( "/appointment-list");
-  };
-
  
+  const onChangese = () => {
+    navigation("/appointment-list");
+  };
 
   return (
     <div className="dashboard-parernt-div">
       <div className="nav-bar-dashboard">
+        <img className="admin-logo-im" src={logo}></img>
         <div className="welcome-db">
-          <h1>Welcome ! {name} </h1>
+          <h1>Welcome to Admin Dashboard {name}!</h1>
         </div>
-        <button className="btn-logout" onClick={onChange}>
+        <button className="btn-logout-admin" onClick={onChange}>
           Logout
         </button>
-        
       </div>
-      <button className="btn-logout" onClick={onChanges}>
-          add Doctors
-        </button>
-        <button className="btn-logout" onClick={onChangese}>
-          Appointment list 
-        </button>
-   
+      <button  className="appinment-button-homes" onClick={onChangese}>
+        Appointment list
+      </button>
+      <div className="appinment-button-home" id="appoinment-text">
+        <Link to="/doctor_register" className="appinment-button-homes">
+          <span>Doctor Register</span>
+        </Link>
+      </div>
     </div>
   );
 };

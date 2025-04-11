@@ -80,3 +80,13 @@
     text-align: center;
     color: rgb(1, 50, 93);
 }
+.back-admin-dash{
+    display: flex;
+    text-decoration: none;
+    background-color: black;
+    color: aliceblue;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 65px;
+}

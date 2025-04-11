@@ -1,123 +1,162 @@
-
-.contact-parent-main{
-    background-color: #74c7c7bb;
-  
+.contact-parent-main {
+  background-color: #74c7c7bb;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 body {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 .header-container {
-    background: #002147;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+  background: #002147;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
 }
 .header h1 {
-    font-size: 36px;
-    margin-top: 10px;
+  font-size: 36px;
+  margin-top: 10px;
 }
 .contact-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
 }
 .contact-card {
-    background: white;
-    width: 30%;
-    text-align: center;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: 0.3s;
+  background: white;
+  width: 30%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
 .contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
 }
 .contact-card img {
-    width: 50px;
-    margin-bottom: 10px;
+  width: 50px;
+  margin-bottom: 10px;
 }
 .contact-card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 .contact-card p {
-    color: gray;
+  color: gray;
 }
 @media (max-width: 900px) {
-    .contact-card {
-        width: 45%;
-    }
+  .contact-card {
+    width: 45%;
+  }
 }
 @media (max-width: 600px) {
-    .contact-card {
-        width: 100%;
-    }
+  .contact-card {
+    width: 100%;
+  }
 }
-
-
-
-.content {
+.contact-input-main-div {
+  height: 100vh;
+  width: 500px;
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+  justify-content: center;
+}
+.contact-input-main-div input {
+  width: 450px;
+  background-color: #ffffffa4;
+  text-align: center;
+}
+.contact-input-main-div input::placeholder{
     text-align: center;
-    padding: 40px 20px;
-    background: white;
 }
-.content h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.contact-input-main-div textarea {
+  width: 450px;
+  background-color: #ffffffa4;
 }
-.content p {
-    font-size: 16px;
-    color: gray;
-    max-width: 600px;
-    margin: auto;
+.contact-input-main-div textarea::placeholder{
+    text-align: center;
+}
+.contact-content {
+  margin: auto;
+  text-align: center;
+  height: 90px;
+  justify-content: center;
+  width: 600px;
+  background: white;
+  border-radius: 5px;
+}
+.contact-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.contact-content p {
+  font-size: 15px;
+  color: gray;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 textarea {
-    height: 100px;
-    resize: none;
+  height: 100px;
+  resize: none;
 }
 
 .button-container {
-    text-align: center;
+  text-align: center;
 }
 
 button {
-    background-color: #0056b3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 button:hover {
-    background-color: #003d82;
+  background-color: #003d82;
+}
+
+.p-c-m {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.h3-c-m {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.h2-connect-with-us{
+    text-align: center;
+}
+
+.p-connect-with-us{
+    text-align: center;
+    font-size: 10px;
 }

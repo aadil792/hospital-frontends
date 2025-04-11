@@ -42,15 +42,7 @@ const Header_n = () => {
             >
               <span className="link-span-c">About</span>
             </Link>
-            <Link
-              to="/membership"
-              className={`links-nav ${
-                location.pathname === "/membership" ? "active-link" : ""
-              }`}
-              id="h-child"
-            >
-              <span className="link-span-c">MemberShip</span>
-            </Link>
+          
             <Link
               to="/department"
               className={`links-nav ${
@@ -78,6 +70,15 @@ const Header_n = () => {
               id="h-child"
             >
               <span className="link-span-c">Contact</span>
+            </Link>
+            <Link
+              to="/membership"
+              className={`links-nav ${
+                location.pathname === "/membership" ? "active-link" : ""
+              }`}
+              id="h-child"
+            >
+              <span className="link-span-c">Login</span>
             </Link>
           </div>
         </div>

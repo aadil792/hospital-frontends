@@ -1,9 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home_p from "./pages/home.jsx";
 import Membership from "./pages/membership.jsx";
-import Login_l from "./componets/login/login.jsx";
-import Create_Account from "./componets/account/create.jsx";
-import Dashboard_page from "./pages/dashboard.jsx";
 import About_page from "./pages/about.jsx";
 import Contact_page from "./pages/contact.jsx";
 import Department_page from "./pages/department.jsx";
@@ -22,6 +19,12 @@ import Doctor_login from "./pages/doctor_pages/doctor login/doctor_login.jsx";
 import Doctor_dashboard from "./pages/doctor_pages/doctor dashboard/doctor_dashboard.jsx";
 import DoctorProctetedRoutes from "./componets/routes/doctorRoutes.jsx";
 import Doctor_list from "./pages/doctor_pages/doctor_list/doctor_list.jsx";
+import UpdatePrescription from "./pages/doctor_pages/doctor_list/patient_pre.jsx";
+import UserDashboard_page from "./componets/login/userDashboard/userDashboard.jsx";
+import UserAppointment from "./componets/login/userAppointment/userAppointment.jsx";
+import UserAppointment_list from "./pages/doctor_pages/doctor_list/userAppointmentlist/userAppointmentlist.jsx";
+import UserAppointmentPrescription from "./pages/doctor_pages/doctor_list/userAppointmentlist/userAppointmentPresc.jsx";
+import UserPrescrition_list from "./componets/login/userPrescription/userPrescription.jsx";
 
 const App = () => {
   return (
@@ -29,8 +32,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home_p />} />
         <Route path="/membership" element={<Membership />} />
-        <Route path="/login" element={<Login_l />} />
-        <Route path="/create_account" element={<Create_Account />} />
         <Route path="/register" element={<Register/>}/>
         <Route path="/about" element={<About_page />} />
         <Route path="/contact" element={<Contact_page />} />
@@ -44,12 +45,17 @@ const App = () => {
         <Route path="/appointment-update/:id" element={<AppointmentUpdate/>}/>
         <Route path="/doctor_login" element={<Doctor_login/>}/>
         <Route path="/doctor_list" element={<Doctor_list/>}/>
-        {/* Protected Routes*/}
+        <Route path="/patient_prescription/:id" element={<UpdatePrescription/>}/>
+        <Route path="/userAppointment_page" element={<UserAppointment/>}/>
+        <Route path="/userAppointment_list" element={<UserAppointment_list/>}/>
+        <Route path="/userAppointmentPrescription/:id" element={<UserAppointmentPrescription/>}/>
+        <Route path="/userPrescrition" element={<UserPrescrition_list/>}/>
+         {/* Protected Routes*/}
         <Route
           path="/user_dashboard"
           element={
             <UserProRoutes>
-              <Dashboard_page />
+              <UserDashboard_page />
             </UserProRoutes>
           }
         />
@@ -63,7 +69,6 @@ const App = () => {
         />
          <Route path="/doctor_dashboard" element={
           <DoctorProctetedRoutes>
-
             <Doctor_dashboard/>
           </DoctorProctetedRoutes>
          }
