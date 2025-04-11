@@ -61,7 +61,7 @@ const AppointmentUpdate = () => {
         </thead>
         <tbody>
           <td className="td-up-app"> {appointment.fullName} </td>
-          <td className="td-ups-apps"> {appointment.chooseDoctor}</td>
+          <td className="td-ups-apps"> {appointment.doctorName}</td>
           <td className="td-up-app" >
             <input
               type="date"

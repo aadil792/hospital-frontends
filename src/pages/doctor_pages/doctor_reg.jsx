@@ -67,7 +67,7 @@ const Doctor_register_page = () => {
   };
 
   return (
-    <Layout>
+    <>
       {/* register-main */}
       <div className="doctor-main">
         <div className="doctor-form-main">
@@ -173,7 +173,8 @@ const Doctor_register_page = () => {
           </form>
         </div>
       </div>
-    </Layout>
+ 
+   </>
   );
 };
 export default Doctor_register_page;

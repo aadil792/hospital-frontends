@@ -1,0 +1,19 @@
+.disease-div-td input{
+    width: 100%;
+}
+.userAppoints-main-table-div{
+    background-color: antiquewhite;
+    height: 100vh;
+}
+
+.appoinment-table-div{
+    margin: auto;      
+   justify-items: center;
+}
+
+.h1-userAppointment{
+    text-align: center;
+}
+.tb-app-user{
+    margin-top: 20px;
+}

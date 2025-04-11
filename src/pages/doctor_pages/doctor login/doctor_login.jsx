@@ -80,8 +80,7 @@ const Doctor_login = () => {
               value="back"
             />
             <div className="rs-div-l">
-              <span className="rs-div-s"> Not Have Account ?</span>
-              <Link to="/doctor_register" className="rs-div-Link"> Register Here !</Link>
+              <span className="rs-div-s"> Forgot your credentials ? contact to Administration !</span>
             </div>
           </form>
         </div>

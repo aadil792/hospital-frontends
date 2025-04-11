@@ -40,8 +40,6 @@ const Appointment_allist = () => {
       <div className="appointmentList-main-div">
        <div className="nav-app-l-m">
         <h1 className="ap-h1-l-m">Patient Appointment List</h1> 
-         <Link to="/admin_dashboard">back </Link>
-       </div>
         <table cellSpacing={0} className="table-appointmentlist">
           <thead>
             <tr className="tr-appointment">
@@ -89,6 +87,8 @@ const Appointment_allist = () => {
             ))}
           </tbody>
         </table>
+      </div>
+      <Link className="back-admin-dash" to="/admin_dashboard">back </Link>
       </div>
     </>
   );

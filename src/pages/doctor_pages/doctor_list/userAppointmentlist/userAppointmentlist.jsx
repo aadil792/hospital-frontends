@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import "../doctor_list/doctor_list.css";
-
-const Doctor_list = () => {
+import "../userAppointmentlist/userAppointmentlist.css";
+const UserAppointment_list = () => {
   const [appointmentList, setAppointmentList] = useState([]);
-  const [doctorName, setDoctorName] = useState("");
+  const [name, setName] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8000/doctors/appointment", {
+    fetch("http://localhost:8000/doctors/userAppointment", {
       credentials: "include",
     })
       .then((res) => {
@@ -16,21 +15,27 @@ const Doctor_list = () => {
       })
       .then((data) => {
         setAppointmentList(data);
-        if (data.length > 0) {
-          setDoctorName(data[0].doctorName);
-        }
       })
       .catch((error) => console.error("Fetch error:", error));
   }, []);
+  useEffect(() => {
+    fetch("http://localhost:8000/doctors/get-name", {
+      credentials: "include",
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Not authorized");
+        return res.json();
+      })
+      .then((data) => setName(data.name))
+      .catch((err) => console.error("Failed to get name:", err));
+  }, []);
+
   const deleteapp = async (id, name) => {
     try {
-      const res = await fetch(
-        `http://localhost:8000/appointment/delete/${id}`,
-        {
-          method: "delete",
-          credentials: "include",
-        }
-      );
+      const res = await fetch(`http://localhost:8000/patients/delete/${id}`, {
+        method: "delete",
+        credentials: "include",
+      });
       if (res.ok) {
         alert(`Appointment Completed ${name}`);
         setAppointmentList((prev) => prev.filter((appt) => appt.id !== id));
@@ -46,9 +51,9 @@ const Doctor_list = () => {
     <>
       <div className="doc-list-mian-div">
         <h3>
-          Doctor <span>{doctorName} </span> Your Patient Appointments List
+          Dr. <span>{name}</span>, these are the appointments scheduled by User
+          patients in your department.
         </h3>
-
         <table>
           <thead>
             <tr>
@@ -57,6 +62,7 @@ const Doctor_list = () => {
               <th className="th-appointment">Patient Message</th>
               <th className="th-appointment">Appointment Time</th>
               <th className="th-appointment">Appointment Date </th>
+              <th className="th-appointment">Disease</th>
               <th className="th-appointment">Old Prescription</th>
               <th className="th-appointment">Give Patient Prescription </th>
               <th className="th-appointment">Appointment Completed</th>
@@ -70,34 +76,29 @@ const Doctor_list = () => {
                 <td className="id-app-td">{item.textArea}</td>
                 <td className="td-appointment">{item.time}</td>
                 <td className="id-app-td">{item.date} </td>
-                <td className="td-appointment">{item.prescription} </td>
-                <td className="id-app-td">
-                  <Link
-                    className="link-d-l"
-                    to={`/patient_prescription/${item.id}`}
-                  >
-               
-                    Prescription
+                <td className="td-appointment">{item.disease} </td>
+                <td className=" id-app-td">{item.prescription} </td>
+                <td className="td-appointment">
+                  <Link className="ids-apps-tds" to={`/userAppointmentPrescription/${item.id}`}>
+                   Give Prescription
                   </Link>
                 </td>
-                <td className="td-appointment">
+                <td className=" id-app-tdp">
                   <input
-                  className="input-app-doc-list"
                     type="button"
-                    value="Complete"
+                    value="Completed"
                     onClick={() => deleteapp(item.id, item.fullName)}
+                     className="delete-btn-userAp"
                   />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <Link className="doctot_userAppLink" to="/doctor_dashboard">
-          back
-        </Link>
+        <Link  className="doctot_userAppLink" to="/doctor_dashboard">back</Link>
       </div>
     </>
   );
 };
 
-export default Doctor_list;
+export default UserAppointment_list;

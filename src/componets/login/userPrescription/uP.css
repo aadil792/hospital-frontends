@@ -1,0 +1,13 @@
+.link-pre-main-h{
+    text-decoration: none;
+    margin-right: 1200px;
+    background-color: aliceblue;
+    padding: 10px 20px;
+    text-align: center;
+    justify-items: center;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 5px;
+    position: relative;
+    top: 13px;
+}
