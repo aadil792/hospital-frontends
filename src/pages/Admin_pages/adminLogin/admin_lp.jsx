@@ -1,115 +1,156 @@
-// admin login page
-
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { LogIn, ShieldAlert, ArrowLeft } from "lucide-react"
 import "../adminLogin/admin_lp.css";
-import Layout from "../../../componets/layout/layout";
 
-const Admin_LP = () => {
-  const [adminkey, setAdminkey] = useState("");
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+export default function AdminLogin() {
+  const [adminKey, setAdminKey] = useState("")
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [error, setError] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
+
+  const handleBack = () => {
+    navigate("/")
+  }
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
+    setError("")
+    setIsSubmitting(true)
 
-    if (adminkey !== "admin123") {
-      alert("Invalid admin key");
-      setAdminkey(""), setName(""), setPassword(""), setEmail("");
-      return;
+    if (adminKey !== "admin123") {
+      setError("Invalid admin key")
+      resetForm()
+      return
     }
 
-    const useData = {
+    const userData = {
       name,
       email,
       password,
-    };
-    const res = await fetch("http://localhost:8000/user/login", {
-      method: "post",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(useData),
-      credentials: "include",
-    });
-    if (res.ok) {
-      navigate("/admin_dashboard");
-      setName("");
-      setAdminkey("");
-      setEmail("");
-      setPassword("");
-    } else {
-      alert("invalid credentials ");
-      setName("");
-      setAdminkey("");
-      setEmail("");
-      setPassword("");
     }
-  };
+
+    try {
+      const res = await fetch("http://localhost:8000/user/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+        credentials: "include",
+      })
+
+      if (res.ok) {
+        navigate("/admin_dashboard")
+        resetForm()
+      } else {
+        setError("Invalid credentials")
+        resetForm()
+      }
+    } catch (error) {
+      console.error(error)
+      setError("Something went wrong. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const resetForm = () => {
+    setAdminKey("")
+    setName("")
+    setEmail("")
+    setPassword("")
+    setIsSubmitting(false)
+  }
 
   return (
-    <>
-      <Layout>
-        <div className="admin-main-div">
-          <div className="admin-form-div">
-            <form onSubmit={handleSubmit}>
-              <p className="p-admin"> Admin Login </p>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Full Name"
-                className="admin-input"
-                required
-              />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
-                className="admin-input"
-                required
-              />
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
-                className="admin-input"
-                required
-              />
-              <input
-                type="password"
-                className="admin-input"
-                onChange={(e) => {
-                  setAdminkey(e.target.value);
-                }}
-                value={adminkey}
-                name="admin-key"
-                placeholder="Admin Key"
-                required
-              />
-              <p className="pt-admin">
-                Forgot You are Admin Key ? Contact To Management
-              </p>
-              <input className="admin-st-btn" type="submit" value="Login" />
-              <div className="reg-div-admin">
-                Don't have an Account ?
-                <Link to="/register" className="reg-link-admin">
-                 
-                  Register
-                </Link>
-              </div>
-            </form>
-          </div>
-        </div>
-      </Layout>
-    </>
-  );
-};
+    <div className="admin-login-container">
+      <div className="back-button-wrapper">
+        <button className="back-button" onClick={handleBack}>
+          <ArrowLeft className="icon" />
+          Back
+        </button>
+      </div>
 
-export default Admin_LP;
+      <div className="admin-card">
+        <div className="admin-card-header">
+          <h2 className="admin-card-title">
+            <ShieldAlert className="icon" />
+            Admin Login
+          </h2>
+          <p className="admin-card-description">
+            Enter your credentials to access the admin dashboard
+          </p>
+        </div>
+
+        {error && <div className="admin-alert">{error}</div>}
+
+        <form onSubmit={handleSubmit} className="admin-form">
+          <div className="form-group">
+            <label htmlFor="name">Full Name</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter your full name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="admin-key">Admin Key</label>
+            <input
+              id="admin-key"
+              type="password"
+              placeholder="Enter admin key"
+              value={adminKey}
+              onChange={(e) => setAdminKey(e.target.value)}
+              required
+            />
+            <p className="note">
+              Forgot your Admin Key? Contact management for assistance.
+            </p>
+          </div>
+
+          <button type="submit" className="submit-button" disabled={isSubmitting}>
+            <LogIn className="icon" />
+            {isSubmitting ? "Logging in..." : "Login"}
+          </button>
+
+          <div className="register-link">
+            Don’t have an account? <a href="/register">Register</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
