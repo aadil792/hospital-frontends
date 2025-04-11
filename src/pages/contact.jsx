@@ -1,6 +1,48 @@
+import { useState } from "react";
 import Layout from "../componets/layout/layout";
 import "../pages/pages_css/contact.css";
 const Contact_page = () => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [thoughts, setThoughts] = useState("");
+
+  const OnHandle = async (e) => {
+    e.preventDefault();
+    const useData = {
+      name,
+      phone,
+      email,
+      subject,
+      thoughts,
+    };
+
+    try {
+      const res = await fetch("http://localhost:8000/contact/addContact", {
+        method: "post",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(useData),
+      });
+      if (res.ok) {
+        alert("your message is sented");
+        setName(""),
+        setEmail(""),
+        setPhone(""),
+        setSubject(""),
+        setThoughts("")
+      }
+    } catch (error) {
+      alert(console.error(error));
+      setName(""),
+      setEmail(""),
+      setPhone(""),
+      setSubject(""),
+      setThoughts("")
+    }
+  };
   return (
     <>
       <Layout>
@@ -36,15 +78,17 @@ const Contact_page = () => {
               <p>North Main Street, Brooklyn, Australia</p>
             </div>
           </div>
-         
-            <h2 className="h2-connect-with-us">Connect with us</h2>
-            <p className="p-connect-with-us">By Filling Form </p>
+
+          <h2 className="h2-connect-with-us">Connect with us</h2>
+          <p className="p-connect-with-us">By Filling Form </p>
           <div className="contact-input-main-div">
-            <form>
+            <form  onSubmit={OnHandle}>
               <div className="form-group">
                 <input
                   type="text"
                   id="name"
+                  value={name}
+                  onChange={(e)=>setName(e.target.value)}
                   placeholder=" Your Full Name"
                   required
                 ></input>
@@ -54,6 +98,8 @@ const Contact_page = () => {
                 <input
                   type="email"
                   id="email"
+                  value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
                   placeholder="Your Email Address"
                   required
                 ></input>
@@ -63,6 +109,8 @@ const Contact_page = () => {
                 <input
                   type="tel"
                   id="phone"
+                  value={phone}
+                  onChange={(e)=>setPhone(e.target.value)}
                   placeholder=" Your Phone Number"
                 ></input>
               </div>
@@ -71,6 +119,8 @@ const Contact_page = () => {
                 <input
                   type="text"
                   id="topic"
+                  value={subject}
+                  onChange={(e)=>setSubject(e.target.value)}
                   placeholder="Subject of Your Message"
                 ></input>
               </div>
@@ -78,6 +128,8 @@ const Contact_page = () => {
               <div className="form-group">
                 <textarea
                   id="message"
+                  value={thoughts}
+                  onChange={(e)=>setThoughts(e.target.value)}
                   placeholder="Your valuable  thoughts — we’re listening!"
                   required
                 ></textarea>

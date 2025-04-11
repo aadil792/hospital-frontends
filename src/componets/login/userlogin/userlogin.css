@@ -1,18 +1,48 @@
-.user-form-div{
-    background-color: rgb(53, 50, 42);
+.user-form-div {
+  background-color: rgb(53, 50, 42);
+  display: flex;
+  width: 450px;
+  justify-content: center;
+  height: 350px;
+  margin: auto;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+.rs-div-s {
+  font-size: 9px;
+  color: black;
+}
+.patient-back-button {
+  background-color: black;
+  width: 100px;
+}
+.login-main-div {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  background-position:contain;
+  background-size: contain;
+  height: 100vh;
+  background-repeat: no-repeat;
+background-color: antiquewhite;
+}
+.login-form-div{
     display: flex;
-    width: 450px;
-    justify-content: center;
+    background-color: rgba(240, 248, 255, 0.633);
     height: 350px;
     margin: auto;
-    align-items: center;
+    width: 500px;
+    justify-content: center;
+    color: black;
     border-radius: 5px;
-    box-shadow: 0px 0px 15px rgb(0, 0, 0);
+}
+#login-input::placeholder{
+    color: black;
+}
+.pd-admin{
+    text-align: center;
+    margin-top: 10px;
 }
 .rs-div-s{
-    font-size: 9px;
-}
-.patient-back-button{
-    background-color: black;
-    width: 100px;
+    color: black;
 }

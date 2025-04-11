@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../register/register.css";
 import { Link, useNavigate } from "react-router-dom";
-import Layout from "../../layout/layout";
+
 
 const Register = () => {
   const [name, setName] = useState("");
