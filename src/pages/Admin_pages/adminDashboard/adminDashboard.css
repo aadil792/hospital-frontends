@@ -15,12 +15,55 @@
   color: aliceblue;
 }
 
-.btn-logout-admin{
-  background-color: black;
-
+#btn-logout-admin{
+  background-color: rgb(166, 67, 67);
+  border: none;
+  color: aliceblue;
  height: 50px;
  margin-top: 5px;
 }
 .admin-logo-im{
   width: 160px;
+}
+
+.btn-logout-admins{
+  background-color: rgba(240, 248, 255, 0.131);
+  width: 80px;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+   position: relative;
+   right: 5px; 
+   height: 30px;
+   top: 8px;
+   cursor: pointer;
+}
+.btn-logout-admins:hover{
+  background-color: rgba(165, 42, 42, 0.606);
+}
+.main-admin-db{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top:10px;
+}
+.appinmen-button-homes{
+  background-color: rgba(0, 0, 0, 0.606);
+  color: aliceblue;
+  border: none;
+  width: 200px;
+  height: 55px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.appinmen-button-homes:hover{
+  background-color:  rgba(0, 0, 0, 0.796);;
+}
+.appinmen-button-home {
+  background-color: rgba(0, 0, 0, 0.606);
+  color: aliceblue;
+  border: none;
+  width: 200px;
+  height: 55px;
+  border-radius: 5px;
+  text-decoration: none;
 }

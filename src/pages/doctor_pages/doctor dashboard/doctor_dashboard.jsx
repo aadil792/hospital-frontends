@@ -56,17 +56,16 @@ const Doctor_dashboard = () => {
             logout
           </button>
         </nav>
-
         <div className="dashboard-main-doctor">
           <div className="userapp-btn">
-
-          <button className="btn-userAppointment" onClick={onchange}>
-            User Appointments
-          </button>
-          <button className="btn-general" onClick={change}>
-            General Appointments
-          </button>
+            <button className="btn-userAppointment" onClick={onchange}>
+              User Appointments
+            </button>
+            <button className="btn-general" onClick={change}>
+              General Appointments
+            </button>
           </div>
+          
         </div>
       </div>
     </>

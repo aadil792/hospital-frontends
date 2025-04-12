@@ -11,3 +11,10 @@
     position: relative;
     top: 13px;
 }
+.remove-div{
+    background: none;
+}
+
+.remove-div:hover{
+    background-color: brown;
+}

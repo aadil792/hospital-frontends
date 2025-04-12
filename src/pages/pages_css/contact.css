@@ -1,15 +1,14 @@
 .contact-parent-main {
   background-color: #74c7c7bb;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-body {
-  background-color: #f8f9fa;
-}
+
 .header-container {
   background: #002147;
   color: white;
@@ -26,15 +25,23 @@ body {
   gap: 20px;
   padding: 40px 20px;
   flex-wrap: wrap;
+  cursor: pointer;
 }
 .contact-card {
-  background: white;
-  width: 30%;
+  background-color: rgba(219, 43, 43, 0.179);
+  width: 25%;
+  height: 200px;
   text-align: center;
+  color: #000000;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+  cursor: pointer;
+}
+#contact-email:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
 }
 .contact-card:hover {
   transform: translateY(-5px);
@@ -49,7 +56,7 @@ body {
   margin-bottom: 10px;
 }
 .contact-card p {
-  color: gray;
+  color: rgb(0, 0, 0);
 }
 @media (max-width: 900px) {
   .contact-card {
@@ -71,18 +78,26 @@ body {
 }
 .contact-input-main-div input {
   width: 450px;
-  background-color: #ffffffa4;
+  background-color: #ffffff34;
   text-align: center;
+  border-radius: 5px;
+  border: none;
 }
-.contact-input-main-div input::placeholder{
-    text-align: center;
+.contact-input-main-div input::placeholder {
+  text-align: center;
+  color: #000000;
+  font-size: 13px;
+  
 }
 .contact-input-main-div textarea {
   width: 450px;
   background-color: #ffffffa4;
+  border: none;
+  background-color: #ffffff34;
 }
-.contact-input-main-div textarea::placeholder{
-    text-align: center;
+.contact-input-main-div textarea::placeholder {
+  text-align: center;
+  color: #000000;
 }
 .contact-content {
   margin: auto;
@@ -100,6 +115,18 @@ body {
 .contact-content p {
   font-size: 15px;
   color: gray;
+}
+.contact-main-div-table {
+  background-color: #cf4848f7;
+  width: 600px;
+  height: 460px;
+  margin: auto;
+  justify-content: center;
+  border-radius: 5px;
+  margin-top: 30px;
+  position: relative;
+  bottom: 15px;
+  box-shadow: 0px 0px 5px black;
 }
 
 .form-group {
@@ -128,18 +155,27 @@ textarea {
   text-align: center;
 }
 
-button {
-  background-color: #0056b3;
+.button-container {
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   font-size: 16px;
 }
-
-button:hover {
+.btn-contact-sub {
   background-color: #003d82;
+  width: 150px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.btn-contact-sub:hover {
+  background-color: #0b0d10;
+  color: #ccc;
 }
 
 .p-c-m {
@@ -152,11 +188,11 @@ button:hover {
   margin-top: 10px;
 }
 
-.h2-connect-with-us{
-    text-align: center;
+.h2-connect-with-us {
+  text-align: center;
 }
 
-.p-connect-with-us{
-    text-align: center;
-    font-size: 10px;
+.p-connect-with-us {
+  text-align: center;
+  font-size: 10px;
 }

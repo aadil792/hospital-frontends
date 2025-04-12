@@ -1,12 +1,12 @@
 .doc-list-mian-div{
-    background-color: antiquewhite;
+    background-color: rgb(94, 159, 197);
     height: 100vh;
     justify-items: center;
 }
 .link-d-l{
     padding: 10px 55px;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
    
 }
 .link-d-l:hover{
@@ -21,4 +21,13 @@
     background-color: rgb(255, 38, 0);
     color: aliceblue;
 
+}
+.doctot_userAppLink{
+    background-color: rgba(240, 248, 255, 0.26);
+    width: 80px;
+    height: 30px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    color: black;
 }

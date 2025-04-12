@@ -75,16 +75,16 @@ const UserAppointment = () => {
     
   };
 
-
   return (
     <>
       <div className="userAppoints-main-table-div">
-        <h2 className="h1-userAppointment"> Make Appointment {name} </h2>
+        <h2 className="h1-userAppointment"> Hi {name}! Book your Appointment </h2>
         <div className="appoinment-table-div">
           <form onSubmit={Handlesubmit}>
+                  <h3 className="h2-k-l-p">Fill the form !</h3>
             <table className="tb-app-user">
               <tbody>
-                <tr className="department-select-div">
+                <tr>
                   <td>
                     <input
                       type="text"
@@ -154,7 +154,7 @@ const UserAppointment = () => {
                     />
                   </td>
                 </tr>
-                <tr className="message-div">
+                <tr className="message-div-hi">
                   <td colSpan="2">
                     <textarea
                       value={message}
@@ -166,7 +166,7 @@ const UserAppointment = () => {
                 </tr>
                 <td colSpan="2">
                   <button className="appoinment-t-button">
-                    Make Appointment
+                    Book Appointment
                   </button>
                 </td>
               </tbody>

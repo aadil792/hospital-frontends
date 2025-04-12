@@ -20,30 +20,37 @@
 .th-appointment:hover{
     background-color:rgb(16, 34, 99);
 }
-.td-appointment{
+.tds-appointment{
     text-align: center;
     background-color: rgb(255, 255, 255);
 }
-.td-appointment:hover{
+.tds-appointment:hover{
     background-color: rgb(206, 211, 215);
 }
-.id-app-td{
+.ids-app-td{
     background-color: rgb(172, 194, 221);
     text-align: center;
+    height: 40px;
 }
-.id-app-td:hover{
+.ids-app-td:hover{
     background-color: rgb(65, 98, 126);
 }
-.status-complete{
+.status-completeas{
     background: none;
     color: rgb(255, 0, 0);
-    width: 100%;    
+    width: 100%;  
+    border: none;  
+    height: 40px;
 }
-.status-complete:hover{
+.ids-app-tds{
+    background-color: rgb(172, 194, 221);
+}
+.status-completeas:hover{
     background:none;
     background-color: red;
     border-radius: 0px;
     color: rgb(255, 255, 255);
+    
 }
 .appointmentList-main-div table td{
   border-bottom: 1px solid black;

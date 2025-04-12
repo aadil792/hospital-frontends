@@ -73,9 +73,9 @@ const UpdatePrescription = () => {
                 placeholder="Prescription"
               ></textarea>
             </td>
-            <td className="td-pa-app">
-              <button className="papr-tu-app" onClick={handleUpdate}>
-                Sent
+            <td className="tds-pa-app">
+              <button className="papr-tu-app" id="pre-user" onClick={handleUpdate}>
+                Done
               </button>
             </td>
           </tr>

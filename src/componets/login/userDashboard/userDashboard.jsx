@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 
+import logo from "../../../assets/main_logo.png";
+
 import "../userDashboard/userDashboard.css";
 import { useEffect, useState } from "react";
 
@@ -42,6 +44,8 @@ const UserDashboard_page = () => {
     <>
       <div className="dashboard-main-div">
         <nav className="nav-user-dash">
+          <img className="logo-userDashbord" src={logo}></img>
+          <h1 className="dh-h1-welcome">Welcome to DashBoard ,{name}</h1>
           <div className="div-mi-btn-logout">
             <button
               className="button-home-contain"
@@ -50,9 +54,6 @@ const UserDashboard_page = () => {
             >
               Logout
             </button>
-          </div>
-          <div className="dh-h1-welcome">
-            <h1>welcome,{name}</h1>
           </div>
         </nav>
         <main>
@@ -64,7 +65,6 @@ const UserDashboard_page = () => {
               Book Appointment
             </Link>
             <Link to="/userPrescrition" className="button-home-contain-user">
-              {" "}
               View Prescription
             </Link>
           </div>

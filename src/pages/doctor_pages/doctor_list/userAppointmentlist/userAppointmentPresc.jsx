@@ -1,7 +1,7 @@
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-
+import "../userAppointmentlist/userAppointmentPre.css";
 const UserAppointmentPrescription = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -56,7 +56,7 @@ const UserAppointmentPrescription = () => {
   if (!appointment) return <p>Loading...</p>;
 
   return (
-    <div className="patient-pre-reschedule-main">
+    <div className="patient-pre-reschedule-main" id="uap">
         
             <Link className="doctot_userAppLink" to="/userAppointment_list">back</Link>
       
@@ -80,8 +80,8 @@ const UserAppointmentPrescription = () => {
                 placeholder="Prescription"
               ></textarea>
             </td>
-            <td className="td-pa-app">
-              <button className="papr-tu-app" onClick={handleUpdate}>
+            <td className="tds-pa-app">
+              <button className="papr-tu-app" id="pre-user" onClick={handleUpdate}>
                 Done
               </button>
             </td>

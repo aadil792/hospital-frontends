@@ -4,7 +4,6 @@
   text-align: center;
   color: rgb(103, 77, 30);
 }
-
 .f-para {
   text-align: center;
   font-weight: 600;
@@ -64,9 +63,31 @@
   word-wrap: break-word;
   overflow: hidden;
 }
+.link-div-membership {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 130px;
+}
+#appoinment-tex {
+  display: flex;
+}
+.join-div-h1{
+  position: relative;
+  top: 10px;
+}
+.f-para{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
 .membership-div-matter:hover {
   background-color: rgb(27, 65, 85);
   box-shadow: 0px 10px 10px black;
+}
+.appinment-button-homes:hover{
+  background-color: #9a1010;
+
 }
 .contain-membership {
   margin-top: 5px;
@@ -121,5 +142,4 @@
     flex-direction: column;
     align-items: center;
   }
-  
 }

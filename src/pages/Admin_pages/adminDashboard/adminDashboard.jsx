@@ -25,6 +25,12 @@ const AdminDashboardPage = () => {
       window.history.pushState(null, "", window.location.href);
     };
   }, []);
+  const handle=()=>{
+    navigation("/doctor_register")
+  }
+  const handles=()=>{
+    navigation("/contact_list")
+  }
 
   const onChange = async () => {
     try {
@@ -37,7 +43,7 @@ const AdminDashboardPage = () => {
       console.error("logout filed " + err);
     }
   };
- 
+
   const onChangese = () => {
     navigation("/appointment-list");
   };
@@ -49,17 +55,26 @@ const AdminDashboardPage = () => {
         <div className="welcome-db">
           <h1>Welcome to Admin Dashboard {name}!</h1>
         </div>
-        <button className="btn-logout-admin" onClick={onChange}>
+        <button className="btn-logout-admins" onClick={onChange}>
           Logout
         </button>
       </div>
-      <button  className="appinment-button-homes" onClick={onChangese}>
-        Appointment list
-      </button>
-      <div className="appinment-button-home" id="appoinment-text">
-        <Link to="/doctor_register" className="appinment-button-homes">
-          <span>Doctor Register</span>
-        </Link>
+      <div className="main-admin-db">
+        <div className="cn-main-admin-list">
+          <button className="appinmen-button-homes" onClick={onChangese}>
+            Appointment list
+          </button>
+        </div>
+        <div className="">
+        <button className="appinmen-button-homes" onClick={handle}>
+           doctor Register
+          </button>
+        </div>
+        <div className="">
+        <button className="appinmen-button-homes" onClick={handles}>
+          Contact Review
+          </button>
+        </div>
       </div>
     </div>
   );

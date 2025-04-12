@@ -57,16 +57,16 @@ const Appointment_allist = () => {
           <tbody>
             {appointmentList.map((appointment) => (
               <tr key={appointment.id}>
-                <td className="id-app-td">{appointment.specializationDoctor} </td>
-                <td className="td-appointment">{appointment.doctorName} </td>
-                <td className="id-app-td">{appointment.date} </td>
-                <td className="td-appointment">{appointment.time} </td>
-                <td className="id-app-td">{appointment.fullName} </td>
-                <td className="td-appointment">{appointment.number} </td>
-                <td className="id-app-td"> {appointment.textArea}</td>
-                <td className="td-appointment">
+                <td className="ids-app-td">{appointment.specializationDoctor} </td>
+                <td className="tds-appointment">{appointment.doctorName} </td>
+                <td className="ids-app-td">{appointment.date} </td>
+                <td className="tds-appointment">{appointment.time} </td>
+                <td className="ids-app-td">{appointment.fullName} </td>
+                <td className="tds-appointment">{appointment.number} </td>
+                <td className="ids-app-td"> {appointment.textArea}</td>
+                <td className="tds-appointment">
                   <button
-                    className="status-complete"
+                    className="status-completeas"
                     onClick={() =>
                       deleteapp(appointment.id, appointment.fullName)
                     }
@@ -74,7 +74,7 @@ const Appointment_allist = () => {
                     Delete
                   </button>
                 </td>
-                <td className="id-app-tds">
+                <td className="ids-app-tds">
                   <Link
                     className="apt-link-u"
                     id="h-i"

@@ -4,11 +4,11 @@
 .appoinment-main-page {
   display: flex;
   font-family: "Open Sans", sans-serif;
-  width: 90%; /* Responsive width */
-  max-width: 1200px; /* Maximum width */
-  min-width: 300px; /* Minimum width */
-  margin: 0 auto; /* Center the div */
-  flex-direction: row; /* Default layout */
+  width: 90%; 
+  max-width: 1200px;
+  min-width: 300px;
+  margin: 0 auto; 
+  flex-direction: row; 
   padding: 20px;
   box-sizing: border-box;
 }
@@ -16,16 +16,20 @@
 .appointment-main-page-div{
   background-color: #74c7c7bb;
 }
+#app-div-tb{
+  height: 500px;
+}
+
 /* main first box */
 .appoinment-first-div {
   margin: auto;
   color: rgb(33, 33, 140);
   box-shadow: 0px 0px 10px rgb(37, 70, 126);
-  width: 500px;
   justify-content: center;
   text-align: center;
-  height: 80px;
-  border-radius: 10px;
+  height: 120px;
+  border-radius: 5px;
+  justify-items: center;
   
 }
 .appoinment-first-div:hover {
@@ -42,6 +46,7 @@
 /* second div text box  */
 .second-div-text-div {
   margin-left: 12px;
+  text-align: center;
 }
 .book-para {
   margin-top: 10px;
@@ -58,11 +63,14 @@
 
 /* table css starts here */
 .appoinment-table-div {
+  display: flex;
   margin-top: 15px;
+  justify-items: center;
 }
 
 .appoinment-table-div table {
   border-spacing: 10px;
+  margin-top:40px;
 }
 .appoinment-table-div td {
   height: 50px;
