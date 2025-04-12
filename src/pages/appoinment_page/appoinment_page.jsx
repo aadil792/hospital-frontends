@@ -64,10 +64,6 @@ const Appoinment_page = () => {
     <Layout>
       <div className="appointment-main-page-div">
         <div className="appoinment-main-page">
-          <div className="appoinment-first-div">
-            <h2> Call For an Emergency Service</h2>
-            <h1>+91 9876545678 </h1>
-          </div>
           <div className="appoinment-second-div">
             <div className="second-div-text-div">
               <h1>Book an Appointment</h1>
