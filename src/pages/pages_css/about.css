@@ -5,12 +5,13 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: #1a1a1a;
 }
 
 .about-header {
-  background: url("C:\Users\SANTOSHI\Downloads\WhatsApp Image 2025-04-05 at 21.35.00_1615ff41.jpg")center/cover no-repeat;
+  background: url("C:\Users\SANTOSHI\Downloads\WhatsApp Image 2025-04-05 at 21.35.00_1615ff41.jpg")
+    center/cover no-repeat;
   height: 300px;
   display: flex;
   align-items: center;
@@ -60,7 +61,7 @@ body {
 }
 
 .signature {
-  font-family: 'Brush Script MT', cursive;
+  font-family: "Brush Script MT", cursive;
   margin-top: 20px;
   opacity: 0.6;
   font-size: 24px;
@@ -85,7 +86,6 @@ body {
   height: auto;
   border-radius: 6px;
 }
-
 
 .service-card h3 {
   font-size: 18px;
@@ -165,7 +165,7 @@ body {
   background-color: #f8f8f8;
   border-radius: 8px;
   padding: 20px 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s;
 }
 

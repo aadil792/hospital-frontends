@@ -1,70 +1,68 @@
-*{
+* {
   ::-webkit-scrollbar {
     display: none;
   }
 }
 
 .department-container {
-    background-color: #74c7c7bb;
-    font-family: "Open Sans", sans-serif;
-    padding: 2rem;
-    min-height: 100vh;
-   
-  }
-  
-  .department-container h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #333;
-  }
-  
+  background-color: #74c7c7bb;
+  font-family: "Open Sans", sans-serif;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.department-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.department-card {
+  background-color: rgba(247, 247, 247, 0.297);
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-5px);
+  background-color: rgb(67, 128, 182);
+  color: aliceblue;
+}
+
+.department-card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.department-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.department-card li {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
   .departments-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: 1fr;
   }
-  
+
   .department-card {
-    background-color: rgba(247, 247, 247, 0.297);
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    transition: transform 0.2s ease;
-    
+    padding: 1rem;
   }
-  
-  .department-card:hover {
-    transform: translateY(-5px);
-    background-color: rgb(67, 128, 182);
-    color: aliceblue;
-  }
-  
-  .department-card h2 {
-    margin-bottom: 1rem;
-    font-size: 1.2rem;
-  }
-  
-  .department-card ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .department-card li {
-    margin: 0.5rem 0;
-    color: #555;
-    font-size: 0.95rem;
-    color: #000000;
-  }
-  
-  @media (max-width: 768px) {
-    .departments-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .department-card {
-      padding: 1rem;
-    }
-  }
+}

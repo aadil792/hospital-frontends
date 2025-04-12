@@ -33,18 +33,18 @@
   color: black;
   margin-bottom: 10px;
 }
-.tb-app-user input::placeholder{
-    color: black;
+.tb-app-user input::placeholder {
+  color: black;
 }
 .message-div-hi textarea {
   border: none;
   background-color: rgba(150, 158, 166, 0.055);
-  box-shadow:0px 0px 5px bisque;
+  box-shadow: 0px 0px 5px bisque;
 }
-.message-div-hi textarea::placeholder{
-    color: black;
+.message-div-hi textarea::placeholder {
+  color: black;
 }
-.h2-k-l-p{
+.h2-k-l-p {
   text-align: center;
   margin-top: 16px;
 }

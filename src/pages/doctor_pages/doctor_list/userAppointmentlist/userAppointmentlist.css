@@ -1,21 +1,21 @@
-.ids-apps-tds{
-    text-decoration: none;
-    padding: 10px 30px;
-    color: rgb(255, 55, 0);
+.ids-apps-tds {
+  text-decoration: none;
+  padding: 10px 30px;
+  color: rgb(255, 55, 0);
 }
-.ids-apps-tds:hover{
-    background-color: rgb(255, 0, 0);
-    color: aliceblue;
+.ids-apps-tds:hover {
+  background-color: rgb(255, 0, 0);
+  color: aliceblue;
 }
 
-.delete-btn-userAp{
-    background-color: rgb(255, 255, 255);
+.delete-btn-userAp {
+  background-color: rgb(255, 255, 255);
 }
-.id-app-tdp input{
-    background:none;
-    background-color: rgb(158, 182, 213);
+.id-app-tdp input {
+  background: none;
+  background-color: rgb(158, 182, 213);
 }
-.id-app-tdp input:hover{
-    background-color: rgb(247, 3, 3);
-    color: aliceblue;
+.id-app-tdp input:hover {
+  background-color: rgb(247, 3, 3);
+  color: aliceblue;
 }

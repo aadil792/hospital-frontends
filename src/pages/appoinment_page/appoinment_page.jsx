@@ -16,7 +16,7 @@ const Appoinment_page = () => {
     const useData = {
       fullName,
       specializationDoctor,
-     doctorName  ,
+      doctorName,
       time,
       date,
       number,
@@ -83,7 +83,9 @@ const Appoinment_page = () => {
                         <input
                           type="text"
                           value={specializationDoctor}
-                          onChange={(e) => setSpecializationDoctor(e.target.value)}
+                          onChange={(e) =>
+                            setSpecializationDoctor(e.target.value)
+                          }
                           placeholder="Which Specialization Need ? "
                           required
                         />

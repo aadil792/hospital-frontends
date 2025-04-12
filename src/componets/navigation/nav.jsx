@@ -42,7 +42,7 @@ const Header_n = () => {
             >
               <span className="link-span-c">About</span>
             </Link>
-          
+
             <Link
               to="/department"
               className={`links-nav ${
@@ -61,7 +61,7 @@ const Header_n = () => {
             >
               <span className="link-span-c">Make Appointment</span>
             </Link>
-            
+
             <Link
               to="/contact"
               className={`links-nav ${

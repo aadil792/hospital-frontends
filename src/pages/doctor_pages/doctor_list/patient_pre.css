@@ -1,46 +1,44 @@
-.patient-pre-reschedule-main{
-    background-color: antiquewhite;
-    height: 100vh;
-    justify-items: center;
+.patient-pre-reschedule-main {
+  background-color: antiquewhite;
+  height: 100vh;
+  justify-items: center;
 }
-.patient-pre-table-update{
-    width: 50%;
+.patient-pre-table-update {
+  width: 50%;
 }
 
-.th-papre-app{
-    background-color: rgb(29, 29, 78);
-    text-align: center;
-    color: aliceblue;   
-    font-weight: 600;
-    height: 40px;
+.th-papre-app {
+  background-color: rgb(29, 29, 78);
+  text-align: center;
+  color: aliceblue;
+  font-weight: 600;
+  height: 40px;
 }
-.td-pa-app{
-    text-align: center;
-    background-color: rgb(134, 176, 212);
-    font-size: 17px;
+.td-pa-app {
+  text-align: center;
+  background-color: rgb(134, 176, 212);
+  font-size: 17px;
 }
-.td-pa-apps{
-    text-align: center;
-    background-color:  rgb(134, 176, 212);
+.td-pa-apps {
+  text-align: center;
+  background-color: rgb(134, 176, 212);
 }
-.text-area-pa{
-    height: 50px;
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 17px;
+.text-area-pa {
+  height: 50px;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 17px;
 }
-.papr-tu-app{
-    width: 100%;
-    height: 50px;
-    background: none;
-    color: rgb(17, 62, 101);
-    border-radius: none;
-   font-size: 17px;
-   font-weight: 600;
-   
+.papr-tu-app {
+  width: 100%;
+  height: 50px;
+  background: none;
+  color: rgb(17, 62, 101);
+  border-radius: none;
+  font-size: 17px;
+  font-weight: 600;
 }
-.papr-tu-app:hover{
-    color: aliceblue;
-
+.papr-tu-app:hover {
+  color: aliceblue;
 }

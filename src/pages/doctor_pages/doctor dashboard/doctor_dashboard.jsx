@@ -65,7 +65,6 @@ const Doctor_dashboard = () => {
               General Appointments
             </button>
           </div>
-          
         </div>
       </div>
     </>

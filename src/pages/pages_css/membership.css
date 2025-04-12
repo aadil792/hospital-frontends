@@ -72,11 +72,11 @@
 #appoinment-tex {
   display: flex;
 }
-.join-div-h1{
+.join-div-h1 {
   position: relative;
   top: 10px;
 }
-.f-para{
+.f-para {
   display: flex;
   justify-content: center;
   margin-top: 20px;
@@ -85,9 +85,8 @@
   background-color: rgb(27, 65, 85);
   box-shadow: 0px 10px 10px black;
 }
-.appinment-button-homes:hover{
+.appinment-button-homes:hover {
   background-color: #9a1010;
-
 }
 .contain-membership {
   margin-top: 5px;

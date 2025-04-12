@@ -5,7 +5,7 @@ const Department_page = () => {
   const departments = [
     {
       title: "General & Internal Medicine",
-      items: ["General Medicine", "Internal Medicine", "Family Medicine"]
+      items: ["General Medicine", "Internal Medicine", "Family Medicine"],
     },
     {
       title: "Surgical Departments",
@@ -17,8 +17,8 @@ const Department_page = () => {
         "Plastic & Reconstructive Surgery",
         "Urology (Urinary System & Male Reproductive System)",
         "ENT (Ear, Nose & Throat) Surgery",
-        "Ophthalmology (Eye Surgery)"
-      ]
+        "Ophthalmology (Eye Surgery)",
+      ],
     },
     {
       title: "Specialty Medicine",
@@ -32,16 +32,16 @@ const Department_page = () => {
         "Rheumatology (Joints & Autoimmune Diseases)",
         "Dermatology (Skin)",
         "Oncology (Cancer)",
-        "Hematology (Blood Disorders)"
-      ]
+        "Hematology (Blood Disorders)",
+      ],
     },
     {
       title: "Pediatrics & Women's Health",
       items: [
         "Pediatrics (Children's Health)",
         "Neonatology (Newborn & Premature Babies)",
-        "Obstetrics & Gynecology (Pregnancy & Women's Health)"
-      ]
+        "Obstetrics & Gynecology (Pregnancy & Women's Health)",
+      ],
     },
     {
       title: "Psychiatry & Emergency Care",
@@ -49,8 +49,8 @@ const Department_page = () => {
         "Psychiatry (Mental Health)",
         "Psychology (Behavioral & Emotional Health)",
         "Emergency Medicine",
-        "Critical Care & Intensive Care Unit (ICU)"
-      ]
+        "Critical Care & Intensive Care Unit (ICU)",
+      ],
     },
     {
       title: "Diagnostic & Rehabilitation",
@@ -58,9 +58,9 @@ const Department_page = () => {
         "Radiology (X-rays, MRI, CT Scans)",
         "Pathology (Lab Tests & Disease Diagnosis)",
         "Physiotherapy & Rehabilitation",
-        "Anesthesiology (Pain Management & Surgery Support)"
-      ]
-    }
+        "Anesthesiology (Pain Management & Surgery Support)",
+      ],
+    },
   ];
 
   return (

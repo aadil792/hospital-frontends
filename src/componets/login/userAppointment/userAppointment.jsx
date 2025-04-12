@@ -11,7 +11,7 @@ const UserAppointment = () => {
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
   const [disease, setDisease] = useState("");
-  const [name,setName]=useState("");
+  const [name, setName] = useState("");
   const navigation = useNavigate("");
 
   useEffect(() => {
@@ -22,10 +22,9 @@ const UserAppointment = () => {
         if (!res.ok) throw new Error("Not authorized");
         return res.json();
       })
-      .then((data) => setName(data.name))  
+      .then((data) => setName(data.name))
       .catch((err) => console.error("Failed to get name:", err));
   }, []);
- 
 
   const Handlesubmit = async (e) => {
     e.preventDefault();
@@ -37,7 +36,7 @@ const UserAppointment = () => {
       number,
       textArea: message,
       disease,
-      fullName:name,
+      fullName: name,
     };
     try {
       const response = await fetch("http://localhost:8000/patients/add", {
@@ -71,17 +70,17 @@ const UserAppointment = () => {
       setDisease("");
       // setFullname("");
     }
-
-    
   };
 
   return (
     <>
       <div className="userAppoints-main-table-div">
-        <h2 className="h1-userAppointment"> Hi {name}! Book your Appointment </h2>
+        <h2 className="h1-userAppointment">
+          Hi {name}! Book your Appointment{" "}
+        </h2>
         <div className="appoinment-table-div">
           <form onSubmit={Handlesubmit}>
-                  <h3 className="h2-k-l-p">Fill the form !</h3>
+            <h3 className="h2-k-l-p">Fill the form !</h3>
             <table className="tb-app-user">
               <tbody>
                 <tr>

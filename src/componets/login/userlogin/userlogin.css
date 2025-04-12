@@ -111,11 +111,10 @@ input:focus {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-
 }
 
 .submit-button:hover {
-  background-color: #1f2937; /* gray-800 */
+  background-color: #1f2937; 
 }
 
 /* Register link text */
@@ -125,7 +124,7 @@ input:focus {
 }
 
 .register-link a {
-  color: #2563eb; /* blue-600 */
+  color: #2563eb; 
   font-weight: 500;
   text-decoration: none;
 }
