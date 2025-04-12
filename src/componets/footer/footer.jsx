@@ -6,8 +6,6 @@ import linkedinlogo from "../../assets/linkedInlogo.png";
 import { Link } from "react-router-dom";
 
 const Footer_f = () => {
-
-
   return (
     <>
       <div class="footer-container">
@@ -16,9 +14,11 @@ const Footer_f = () => {
             <img src={main_logo} alt="Logo"></img>
           </h2>
           <p>
-            Tempora dolorem voluptatum nam vero assumenda voluptate, facilis ad
-            eos obcaecati tenetur veritatis eveniet distinctio possimus.
+            We are dedicated to providing timely, reliable, and compassionate
+            care, ensuring every patient feels supported throughout their
+            journey to recovery.
           </p>
+
           <div class="social-icons">
             <a href="#">
               <img src={Facebooklogo} alt="Facebook"></img>
@@ -62,9 +62,9 @@ const Footer_f = () => {
           <p>
             <strong>Hours:</strong> Mon to Fri: 08:30 - 18:00
           </p>
-        <Link to="/register" className="subscribe-btn">
-        <span>Subscribe</span>
-        </Link>
+          <Link to="/register" className="subscribe-btn">
+            <span>Subscribe</span>
+          </Link>
         </div>
       </div>
       <p class="footer-bottom">

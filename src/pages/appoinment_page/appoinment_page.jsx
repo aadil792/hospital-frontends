@@ -78,7 +78,7 @@ const Appoinment_page = () => {
                 your health with every step you take."
               </p>
             </div>
-            <div className="appoinment-table-div">
+            <div className="appoinment-table-div" id="app-div-tb">
               <form onSubmit={Handlesubmit}>
                 <table>
                   <tbody>

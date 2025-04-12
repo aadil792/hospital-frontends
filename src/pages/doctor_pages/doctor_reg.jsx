@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Layout from "../../componets/layout/layout";
 import { useNavigate } from "react-router-dom";
 import "../doctor_pages/doctor_reg.css";
 const Doctor_register_page = () => {
@@ -22,13 +21,12 @@ const Doctor_register_page = () => {
   };
 
   const back = () => {
-    navigation("/");
+    navigation("/admin_dashboard");
   };
 
   const handle = async (e) => {
     e.preventDefault();
     if (!conformpasswordCheck()) return;
-
     const useData = {
       doctorName,
       specializationDoctor,
@@ -69,6 +67,7 @@ const Doctor_register_page = () => {
   return (
     <>
       {/* register-main */}
+      
       <div className="doctor-main">
         <div className="doctor-form-main">
           <form onSubmit={handle}>
@@ -160,7 +159,7 @@ const Doctor_register_page = () => {
               />
             </label>
 
-            <div className="reg-back-btn">
+            <div className="reg-back-btns">
               <button type="submit" className="register-form-main-button">
                 Submit
               </button>
@@ -173,8 +172,7 @@ const Doctor_register_page = () => {
           </form>
         </div>
       </div>
- 
-   </>
+    </>
   );
 };
 export default Doctor_register_page;

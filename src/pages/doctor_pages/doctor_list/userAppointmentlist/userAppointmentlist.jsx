@@ -71,16 +71,19 @@ const UserAppointment_list = () => {
           <tbody>
             {appointmentList.map((item) => (
               <tr key={item.id}>
-                <td className="id-app-td">{item.specializationDoctor}</td>
-                <td className="td-appointment">{item.fullName}</td>
-                <td className="id-app-td">{item.textArea}</td>
-                <td className="td-appointment">{item.time}</td>
-                <td className="id-app-td">{item.date} </td>
-                <td className="td-appointment">{item.disease} </td>
-                <td className=" id-app-td">{item.prescription} </td>
-                <td className="td-appointment">
-                  <Link className="ids-apps-tds" to={`/userAppointmentPrescription/${item.id}`}>
-                   Give Prescription
+                <td className="ids-app-td">{item.specializationDoctor}</td>
+                <td className="tds-appointment">{item.fullName}</td>
+                <td className="ids-app-td">{item.textArea}</td>
+                <td className="tds-appointment">{item.time}</td>
+                <td className="ids-app-td">{item.date} </td>
+                <td className="tds-appointment">{item.disease} </td>
+                <td className=" ids-app-td">{item.prescription} </td>
+                <td className="tds-appointment">
+                  <Link
+                    className="ids-apps-tds"
+                    to={`/userAppointmentPrescription/${item.id}`}
+                  >
+                    Give Prescription
                   </Link>
                 </td>
                 <td className=" id-app-tdp">
@@ -88,14 +91,16 @@ const UserAppointment_list = () => {
                     type="button"
                     value="Completed"
                     onClick={() => deleteapp(item.id, item.fullName)}
-                     className="delete-btn-userAp"
+                    className="delete-btn-userAp"
                   />
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <Link  className="doctot_userAppLink" to="/doctor_dashboard">back</Link>
+        <Link className="doctot_userAppLink" to="/doctor_dashboard">
+          back
+        </Link>
       </div>
     </>
   );

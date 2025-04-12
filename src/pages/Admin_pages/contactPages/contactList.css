@@ -1,0 +1,16 @@
+.id-app-tdps{
+    background: none;
+}
+
+.delete-btsn-userAp{
+    background: none;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 0px;
+    height: 40px;
+    cursor: pointer;
+}
+.delete-btsn-userAp:hover{
+    background-color: rgb(226, 16, 16);
+    color: aliceblue;
+}

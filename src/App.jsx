@@ -4,7 +4,6 @@ import Membership from "./pages/membership.jsx";
 import About_page from "./pages/about.jsx";
 import Contact_page from "./pages/contact.jsx";
 import Department_page from "./pages/department.jsx";
-import Doctor_availabilty from "./pages/doctor_availabilty.jsx";
 import Appoinment_page from "./pages/appoinment_page/appoinment_page.jsx";
 import Admin_LP from "./pages/Admin_pages/adminLogin/admin_lp.jsx";
 import ProtectRoutes from "./componets/protectRoutes/protectedRoutes.jsx";
@@ -25,6 +24,8 @@ import UserAppointment from "./componets/login/userAppointment/userAppointment.j
 import UserAppointment_list from "./pages/doctor_pages/doctor_list/userAppointmentlist/userAppointmentlist.jsx";
 import UserAppointmentPrescription from "./pages/doctor_pages/doctor_list/userAppointmentlist/userAppointmentPresc.jsx";
 import UserPrescrition_list from "./componets/login/userPrescription/userPrescription.jsx";
+import ContactList from "./pages/Admin_pages/contactPages/contactList.jsx";
+
 
 const App = () => {
   return (
@@ -36,7 +37,6 @@ const App = () => {
         <Route path="/about" element={<About_page />} />
         <Route path="/contact" element={<Contact_page />} />
         <Route path="/department" element={<Department_page />} />
-        <Route path="/doctor_availabilty" element={<Doctor_availabilty />} />
         <Route path="/appoinment" element={<Appoinment_page />} />
         <Route path="/admin_Login_page" element={<Admin_LP />} />
         <Route path="/user_login" element={<User_Login/>} />
@@ -50,6 +50,7 @@ const App = () => {
         <Route path="/userAppointment_list" element={<UserAppointment_list/>}/>
         <Route path="/userAppointmentPrescription/:id" element={<UserAppointmentPrescription/>}/>
         <Route path="/userPrescrition" element={<UserPrescrition_list/>}/>
+        <Route path="/contact_list" element={<ContactList/>}/>
          {/* Protected Routes*/}
         <Route
           path="/user_dashboard"

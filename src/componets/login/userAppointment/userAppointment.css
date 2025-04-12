@@ -1,19 +1,50 @@
-.disease-div-td input{
-    width: 100%;
+.disease-div-td input {
+  width: 100%;
 }
-.userAppoints-main-table-div{
-    background-color: antiquewhite;
-    height: 100vh;
-}
-
-.appoinment-table-div{
-    margin: auto;      
-   justify-items: center;
+.userAppoints-main-table-div {
+  background-color: rgb(116, 144, 180);
+  height: 100vh;
 }
 
-.h1-userAppointment{
-    text-align: center;
+.appoinment-table-div {
+  display: flex;
+  background-color: rgb(29, 84, 154);
+  width: 800px;
+  height: 600px;
+  border-radius: 5px;
+  justify-content: center;
+  justify-items: center;
+  margin: auto;
+  margin-top: 40px;
+  box-shadow: 0px 0px 5px black;
 }
-.tb-app-user{
-    margin-top: 20px;
+
+.h1-userAppointment {
+  text-align: center;
+}
+
+.h1-userAppointment {
+  position: relative;
+  top: 20px;
+}
+.tb-app-user td input {
+  background-color: rgba(150, 158, 166, 0.055);
+  box-shadow: 0px 0px 5px bisque;
+  color: black;
+  margin-bottom: 10px;
+}
+.tb-app-user input::placeholder{
+    color: black;
+}
+.message-div-hi textarea {
+  border: none;
+  background-color: rgba(150, 158, 166, 0.055);
+  box-shadow:0px 0px 5px bisque;
+}
+.message-div-hi textarea::placeholder{
+    color: black;
+}
+.h2-k-l-p{
+  text-align: center;
+  margin-top: 16px;
 }

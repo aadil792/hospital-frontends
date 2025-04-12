@@ -69,15 +69,16 @@ const UserPrescrition_list = () => {
           <tbody>
             {appointmentList.map((item) => (
               <tr key={item.id}>
-                <td className="id-app-td">{item.specializationDoctor}</td>
-                <td className="td-appointment">{item.fullName}</td>
-                <td className="id-app-td">{item.textArea}</td>
-                <td className="td-appointment">{item.time}</td>
-                <td className="id-app-td">{item.date} </td>
-                <td className="id-app-td">{item.disease} </td>
-                <td className="td-appointment">{item.prescription} </td>
-                <td>
+                <td className="ids-app-td">{item.specializationDoctor}</td>
+                <td className="tds-appointment">{item.fullName}</td>
+                <td className="ids-app-td">{item.textArea}</td>
+                <td className="tds-appointment">{item.time}</td>
+                <td className="ids-app-td">{item.date} </td>
+                <td className="tds-appointment">{item.disease} </td>
+                <td className="ids-app-td">{item.prescription} </td>
+                <td className="tds-appointment">
                   <input
+                  className="remove-div"
                     type="button"
                     value="Complete"
                     onClick={() => deleteapp(item.id, item.fullName)}                    
