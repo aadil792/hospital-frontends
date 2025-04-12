@@ -109,11 +109,7 @@ export default function DoctorLogin() {
           </div>
 
           <div className="form-actions">
-            <button
-              type="submit"
-              className="btn-login"
-              disabled={isSubmitting}
-            >
+            <button type="submit" className="btn-login" disabled={isSubmitting}>
               <LogIn className="icon" />
               {isSubmitting ? "Logging in..." : "Login"}
             </button>

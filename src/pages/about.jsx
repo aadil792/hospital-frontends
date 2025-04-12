@@ -58,7 +58,7 @@ const About_page = () => {
             <img src={counselling} alt="Medical Counseling"></img>
             <h3>Medical Counseling</h3>
             <p>
-             "Our expert medical counselors provide personalized guidance to
+              "Our expert medical counselors provide personalized guidance to
               help patients make informed decisions about their health and
               treatment."
             </p>

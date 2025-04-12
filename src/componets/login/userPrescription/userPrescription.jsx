@@ -17,17 +17,17 @@ const UserPrescrition_list = () => {
       })
       .catch((error) => console.error("Fetch error:", error));
   }, []);
-//   useEffect(() => {
-//     fetch("http://localhost:8000/doctors/get-name", {
-//       credentials: "include",
-//     })
-//       .then((res) => {
-//         if (!res.ok) throw new Error("Not authorized");
-//         return res.json();
-//       })
-//       .then((data) => setName(data.name))
-//       .catch((err) => console.error("Failed to get name:", err));
-//   }, []);
+  //   useEffect(() => {
+  //     fetch("http://localhost:8000/doctors/get-name", {
+  //       credentials: "include",
+  //     })
+  //       .then((res) => {
+  //         if (!res.ok) throw new Error("Not authorized");
+  //         return res.json();
+  //       })
+  //       .then((data) => setName(data.name))
+  //       .catch((err) => console.error("Failed to get name:", err));
+  //   }, []);
 
   const deleteapp = async (id, name) => {
     try {
@@ -49,10 +49,10 @@ const UserPrescrition_list = () => {
   return (
     <>
       <div className="doc-list-mian-div">
-        <Link className="link-pre-main-h" to="/user_dashboard">back</Link>
-        <h3>
-           View Your Prescription
-        </h3>
+        <Link className="link-pre-main-h" to="/user_dashboard">
+          back
+        </Link>
+        <h3>View Your Prescription</h3>
         <table>
           <thead>
             <tr>
@@ -78,10 +78,10 @@ const UserPrescrition_list = () => {
                 <td className="ids-app-td">{item.prescription} </td>
                 <td className="tds-appointment">
                   <input
-                  className="remove-div"
+                    className="remove-div"
                     type="button"
                     value="Complete"
-                    onClick={() => deleteapp(item.id, item.fullName)}                    
+                    onClick={() => deleteapp(item.id, item.fullName)}
                   />
                 </td>
               </tr>

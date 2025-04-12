@@ -1,7 +1,6 @@
 .dashboard-parernt-div {
   background-color: rgb(19, 103, 120);
   height: 100vh;
-  
 }
 .nav-bar-dashboard {
   background-color: rgb(16, 52, 81);
@@ -15,38 +14,38 @@
   color: aliceblue;
 }
 
-#btn-logout-admin{
+#btn-logout-admin {
   background-color: rgb(166, 67, 67);
   border: none;
   color: aliceblue;
- height: 50px;
- margin-top: 5px;
+  height: 50px;
+  margin-top: 5px;
 }
-.admin-logo-im{
+.admin-logo-im {
   width: 160px;
 }
 
-.btn-logout-admins{
+.btn-logout-admins {
   background-color: rgba(240, 248, 255, 0.131);
   width: 80px;
   border: none;
   border-radius: 5px;
   color: aliceblue;
-   position: relative;
-   right: 5px; 
-   height: 30px;
-   top: 8px;
-   cursor: pointer;
+  position: relative;
+  right: 5px;
+  height: 30px;
+  top: 8px;
+  cursor: pointer;
 }
-.btn-logout-admins:hover{
+.btn-logout-admins:hover {
   background-color: rgba(165, 42, 42, 0.606);
 }
-.main-admin-db{
+.main-admin-db {
   display: flex;
   justify-content: space-evenly;
-  margin-top:10px;
+  margin-top: 10px;
 }
-.appinmen-button-homes{
+.appinmen-button-homes {
   background-color: rgba(0, 0, 0, 0.606);
   color: aliceblue;
   border: none;
@@ -55,8 +54,8 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.appinmen-button-homes:hover{
-  background-color:  rgba(0, 0, 0, 0.796);;
+.appinmen-button-homes:hover {
+  background-color: rgba(0, 0, 0, 0.796);
 }
 .appinmen-button-home {
   background-color: rgba(0, 0, 0, 0.606);

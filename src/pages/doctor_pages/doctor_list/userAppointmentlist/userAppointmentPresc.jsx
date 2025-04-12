@@ -12,7 +12,7 @@ const UserAppointmentPrescription = () => {
     fetch(`http://localhost:8000/patients/get/${id}`)
       .then((res) => {
         if (!res.ok) {
-          throw new Error('Failed to fetch data');
+          throw new Error("Failed to fetch data");
         }
         return res.json();
       })
@@ -25,7 +25,7 @@ const UserAppointmentPrescription = () => {
         alert("Error fetching the appointment data");
       });
   }, [id]);
-  
+
   const handleUpdate = async () => {
     try {
       const res = await fetch(
@@ -41,9 +41,7 @@ const UserAppointmentPrescription = () => {
       );
 
       if (res.ok) {
-        alert(
-          `Prescription Sent to ${appointment.fullName}!`
-        );
+        alert(`Prescription Sent to ${appointment.fullName}!`);
         navigate("/userAppointment_list");
       } else {
         alert("Failed to reschedule  appointment");
@@ -57,15 +55,16 @@ const UserAppointmentPrescription = () => {
 
   return (
     <div className="patient-pre-reschedule-main" id="uap">
-        
-            <Link className="doctot_userAppLink" to="/userAppointment_list">back</Link>
-      
+      <Link className="doctot_userAppLink" to="/userAppointment_list">
+        back
+      </Link>
+
       <h2>Prescription for "{appointment.fullName}" Patient</h2>
       <table className="patient-pre-table-update">
         <thead>
           <tr>
             <th className="th-papre-app"> Patient Name </th>
-            <th className="th-papre-app">  Prescription</th>         
+            <th className="th-papre-app"> Prescription</th>
             <th className="th-papre-app"> Sent Prescription </th>
           </tr>
         </thead>
@@ -74,14 +73,18 @@ const UserAppointmentPrescription = () => {
             <td className="td-pa-app"> {appointment.fullName} </td>
             <td className="td-pa-app">
               <textarea
-              className="text-area-pa"
+                className="text-area-pa"
                 value={prescription}
                 onChange={(e) => setPrecription(e.target.value)}
                 placeholder="Prescription"
               ></textarea>
             </td>
             <td className="tds-pa-app">
-              <button className="papr-tu-app" id="pre-user" onClick={handleUpdate}>
+              <button
+                className="papr-tu-app"
+                id="pre-user"
+                onClick={handleUpdate}
+              >
                 Done
               </button>
             </td>

@@ -67,7 +67,7 @@ const Doctor_register_page = () => {
   return (
     <>
       {/* register-main */}
-      
+
       <div className="doctor-main">
         <div className="doctor-form-main">
           <form onSubmit={handle}>

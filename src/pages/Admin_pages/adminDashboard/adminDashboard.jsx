@@ -25,12 +25,12 @@ const AdminDashboardPage = () => {
       window.history.pushState(null, "", window.location.href);
     };
   }, []);
-  const handle=()=>{
-    navigation("/doctor_register")
-  }
-  const handles=()=>{
-    navigation("/contact_list")
-  }
+  const handle = () => {
+    navigation("/doctor_register");
+  };
+  const handles = () => {
+    navigation("/contact_list");
+  };
 
   const onChange = async () => {
     try {
@@ -66,13 +66,13 @@ const AdminDashboardPage = () => {
           </button>
         </div>
         <div className="">
-        <button className="appinmen-button-homes" onClick={handle}>
-           doctor Register
+          <button className="appinmen-button-homes" onClick={handle}>
+            doctor Register
           </button>
         </div>
         <div className="">
-        <button className="appinmen-button-homes" onClick={handles}>
-          Contact Review
+          <button className="appinmen-button-homes" onClick={handles}>
+            Contact Review
           </button>
         </div>
       </div>

@@ -101,12 +101,13 @@ const Contact_page = () => {
                   ></textarea>
                 </div>
                 <div className="button-container">
-                  <button type="submit" className="btn-contact-sub">SEND MESSAGE</button>
+                  <button type="submit" className="btn-contact-sub">
+                    SEND MESSAGE
+                  </button>
                 </div>
               </form>
             </div>
           </div>
-
           <div className="contact-container">
             <div className="contact-card">
               <img
@@ -133,7 +134,6 @@ const Contact_page = () => {
               <p>North Main Street, Brooklyn, Australia</p>
             </div>
           </div>
-          
         </div>
       </Layout>
     </>

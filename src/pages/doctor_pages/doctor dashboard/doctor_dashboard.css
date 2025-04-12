@@ -27,7 +27,7 @@
   width: 80px;
   background-color: rgba(240, 248, 255, 0.271);
 }
-.btn-doctor-logout:hover{
+.btn-doctor-logout:hover {
   background-color: rgba(240, 248, 255, 0.121);
 }
 .db-logo-na {
@@ -39,7 +39,6 @@
   color: aliceblue;
   margin: auto;
 }
-
 
 .btn-general {
   display: flex;
@@ -74,7 +73,7 @@
   color: rgb(0, 0, 0);
   font-weight: 600;
 }
-.btn-userAppointment:hover{
+.btn-userAppointment:hover {
   background-color: rgba(240, 248, 255, 0.106);
 }
 
@@ -88,13 +87,13 @@
   background-color: black;
   color: aliceblue;
   width: 70px;
-  height:40px;
+  height: 40px;
   padding: 10px 10px;
   margin-right: auto;
   margin-left: 10px;
   border-radius: 5px;
   justify-content: center;
 }
-.doctot_userAppLink:hover{
-    background-color: brown;
+.doctot_userAppLink:hover {
+  background-color: brown;
 }

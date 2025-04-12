@@ -17,26 +17,26 @@ const Membership = () => {
             </p>
           </div>
           <div className="link-div-membership">
-          <div className="appinmnt-button-home" id="appoinment-tex">
-            <Link to="/register" className="appinment-button-homes">
-              <span>Register</span>
-            </Link>
-          </div>
-          <div className="appinmet-button-home" id="appoinment-text">
-            <Link to="/user_login" className="appinment-button-homes">
-              <span>Patient login</span>
-            </Link>
-          </div>
-          <div className="appinmnt-button-home" id="appoinment-text">
-            <Link to="/doctor_login" className="appinment-button-homes">
-              <span>Doctor Login</span>
-            </Link>
-          </div>
-          <div className="appinent-button-home" id="appoinment-text">
-            <Link to="/admin_login_page" className="appinment-button-homes">
-              <span>Admin login </span>
-            </Link>
-          </div>
+            <div className="appinmnt-button-home" id="appoinment-tex">
+              <Link to="/register" className="appinment-button-homes">
+                <span>Register</span>
+              </Link>
+            </div>
+            <div className="appinmet-button-home" id="appoinment-text">
+              <Link to="/user_login" className="appinment-button-homes">
+                <span>Patient login</span>
+              </Link>
+            </div>
+            <div className="appinmnt-button-home" id="appoinment-text">
+              <Link to="/doctor_login" className="appinment-button-homes">
+                <span>Doctor Login</span>
+              </Link>
+            </div>
+            <div className="appinent-button-home" id="appoinment-text">
+              <Link to="/admin_login_page" className="appinment-button-homes">
+                <span>Admin login </span>
+              </Link>
+            </div>
           </div>
         </div>
       </Layout>

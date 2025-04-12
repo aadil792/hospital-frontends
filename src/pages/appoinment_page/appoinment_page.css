@@ -4,38 +4,24 @@
 .appoinment-main-page {
   display: flex;
   font-family: "Open Sans", sans-serif;
-  width: 90%; 
+  width: 90%;
   max-width: 1200px;
   min-width: 300px;
-  margin: 0 auto; 
-  flex-direction: row; 
+  margin: auto;
+  justify-content: center;
+  flex-direction: row;
   padding: 20px;
   box-sizing: border-box;
 }
 
-.appointment-main-page-div{
+.appointment-main-page-div {
   background-color: #74c7c7bb;
 }
-#app-div-tb{
-  height: 500px;
-}
-
-/* main first box */
-.appoinment-first-div {
-  margin: auto;
-  color: rgb(33, 33, 140);
-  box-shadow: 0px 0px 10px rgb(37, 70, 126);
-  justify-content: center;
-  text-align: center;
-  height: 120px;
-  border-radius: 5px;
+#app-div-tb {
+  display: flex;
   justify-items: center;
-  
-}
-.appoinment-first-div:hover {
-  box-shadow: 0px 10px 5px rgb(0, 0, 0);
-  background-color: rgb(21, 93, 122);
-  color: rgb(255, 255, 255);
+  height: 500px;
+  justify-content: center;
 }
 
 /* main second box */
@@ -70,7 +56,7 @@
 
 .appoinment-table-div table {
   border-spacing: 10px;
-  margin-top:40px;
+  margin-top: 40px;
 }
 .appoinment-table-div td {
   height: 50px;

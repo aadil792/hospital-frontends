@@ -19,7 +19,6 @@
   box-shadow: 0px 0px 5px black;
 }
 
-
 .input-placeholder-d {
   width: 400px;
   text-align: center;
@@ -62,7 +61,7 @@
   box-shadow: 0px 0px 5px black;
   cursor: pointer;
 }
-.reg-back-btns button{
+.reg-back-btns button {
   display: flex;
   border: none;
   align-items: center;
@@ -76,18 +75,17 @@
   box-shadow: 0px 0px 5px black;
 }
 
-
 .sp-doct {
   text-align: center;
-  font-size: 12px;  
+  font-size: 12px;
 }
-.input-placeholder-a{
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    border: none;
+.input-placeholder-a {
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
 
-.input-placeholder-a:hover{
-    background-color: aliceblue;
+.input-placeholder-a:hover {
+  background-color: aliceblue;
 }

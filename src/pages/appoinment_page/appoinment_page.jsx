@@ -16,7 +16,7 @@ const Appoinment_page = () => {
     const useData = {
       fullName,
       specializationDoctor,
-     doctorName  ,
+      doctorName,
       time,
       date,
       number,
@@ -64,10 +64,6 @@ const Appoinment_page = () => {
     <Layout>
       <div className="appointment-main-page-div">
         <div className="appoinment-main-page">
-          <div className="appoinment-first-div">
-            <h2> Call For an Emergency Service</h2>
-            <h1>+91 9876545678 </h1>
-          </div>
           <div className="appoinment-second-div">
             <div className="second-div-text-div">
               <h1>Book an Appointment</h1>
@@ -87,7 +83,9 @@ const Appoinment_page = () => {
                         <input
                           type="text"
                           value={specializationDoctor}
-                          onChange={(e) => setSpecializationDoctor(e.target.value)}
+                          onChange={(e) =>
+                            setSpecializationDoctor(e.target.value)
+                          }
                           placeholder="Which Specialization Need ? "
                           required
                         />
